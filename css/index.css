@@ -54,7 +54,12 @@
 }
 #onboarding-welcome-container h1{
     font-size: 150px;
-    text-shadow: 2px 2px 5px black;
+    background: linear-gradient(to bottom,#D90356,#E4E1D2);
+
+    -webkit-background-clip:text;
+    /* color: transparent !important; */
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 2px 2px 5px black; */
     font-weight: 700;
 }
 #onboarding-welcome-container img{
