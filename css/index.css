@@ -72,6 +72,15 @@
 }
 #lock-suround{
     display: flex;
-    margin: 0px 10%;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#lock-suround div{
+    text-align: center;
+    width: 50%;
+}
+
+#lock-suround div img{
+    width: 20%;
 }
