@@ -31,7 +31,6 @@
 }
 
 .top-nav-bar-link {
-    padding: 15px 0px;
     display: flex;
     list-style: none;
     width: 60%;
@@ -53,13 +52,10 @@
     text-align: center;
 }
 #onboarding-welcome-container h1{
-    font-size: 150px;
+    font-size: 130px;
     background: linear-gradient(to bottom,#D90356,#E4E1D2);
-
     -webkit-background-clip:text;
-    /* color: transparent !important; */
     -webkit-text-fill-color: transparent;
-    /* text-shadow: 2px 2px 5px black; */
     font-weight: 700;
 }
 #onboarding-welcome-container img{
@@ -71,16 +67,12 @@
     z-index: 10;
 }
 #lock-suround{
+    margin:  2% 4%;
     display: flex;
     justify-content: space-around;
-    width: 100%;
 }
 
-#lock-suround div{
-    text-align: center;
-    width: 50%;
-}
 
 #lock-suround div img{
-    width: 20%;
+    width: 120px;
 }
