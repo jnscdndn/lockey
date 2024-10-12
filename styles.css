@@ -45,14 +45,15 @@ nav ul a {
 
 .main-container h1{
     font-size: 150px;
+    text-shadow: 2px 2px 5px black;
     color: #ff0050;
+    font-weight: 700;
 }
 .main-container img{
     position: absolute;
-    top: 70px;
-    width: 400px;
+    top: 80px;
+    width: 500px;
     left: 50%;
     transform: translateX(-50%); /*center thèimage horizontally*/
-    /* height: auto; */
     z-index: 10;
 }
