@@ -77,7 +77,7 @@
 }
 
 #onboarding-quote-btn{
-    margin-top: 130px;
+    margin-top: 100px;
     display: flex;
     color: rgb(86, 81, 81);
     justify-content: space-between;
@@ -85,8 +85,9 @@
 }
 #onboarding-quote-btn p{
     font-size: 25px;
+    text-align: center;
     margin-left: 60px;
-    width: 20%;
+    width: 30%;
 }
 
 #get-started-button{
@@ -101,5 +102,39 @@
     font-size: 30px;
 }
 
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Apply animations to elements */
+#desktop-div .top-nav-bar {
+    animation: slideInLeft 1s ease-out;
+}
+
+#onboarding-welcome-container {
+    animation: slideInRight 1.2s ease-out;
+}
+
+#lock-suround div:first-child {
+    animation: slideInLeft 1.4s ease-out;
+}
+
+#lock-suround div:last-child {
+    animation: slideInRight 1.4s ease-out;
+}
+
+#get-started-button {
+    animation: slideInRight 1.5s ease-out;
+}
+
+#onboarding-quote-btn p{
+    animation: slideInLeft 1.5s ease-out;
+}
 
 /* Mobile CSS */
