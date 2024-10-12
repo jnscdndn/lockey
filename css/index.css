@@ -17,7 +17,7 @@
 .bg-beige{
     background-color: #E4E1D2;
 }
-
+ /* Desktop CSS */
 .top-nav-bar{
     display: flex;
     justify-content: space-between;
@@ -48,7 +48,7 @@
 
 #onboarding-welcome-container{
     position: relative;
-    margin-top:20px ;
+    margin-top:30px ;
     text-align: center;
 }
 #onboarding-welcome-container h1{
@@ -76,12 +76,30 @@
     width: 120px;
 }
 
-#onboarding-quote{
-    margin-left: 20px;
-    display: inline-block;
-    width: 250px;
+#onboarding-quote-btn{
+    margin-top: 130px;
+    display: flex;
     color: rgb(86, 81, 81);
-    line-height:1.5;
-    letter-spacing: 2px;
-    font-size: 17px;
+    justify-content: space-between;
+    align-items: center;
 }
+#onboarding-quote-btn p{
+    font-size: 25px;
+    margin-left: 60px;
+    width: 20%;
+}
+
+#get-started-button{
+    text-decoration: none;
+    border: none;
+    display: block;
+    width: 35%;
+    padding: 4px;
+    text-align: center;
+    border-radius: 35px 0 0 35px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+/* Mobile CSS */

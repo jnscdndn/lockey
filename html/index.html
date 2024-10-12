@@ -12,35 +12,40 @@
     <link rel="shortcut icon" type="image/x-icon" href="./../images/lockey-logo.png" />
 </head>
 <body class="bg-beige">
-    <nav class="top-nav-bar">
-        <img class="desktop-logo-red" id="onboarding-logo-red" src="./../images/logo-red.png" alt="lockey logo">
-        <ul class="top-nav-bar-link bg-pink">
-            <li><a href="#" >About Us</a></li>
-            <li><a href="#" >Contact Us</a></li>
-            <li><a href="#" >Login</a></li>
-        </ul>
-   </nav>
-
-   <div id="onboarding-welcome-container">
-        <h1 class="pink-text">WELCOME</h1>
-        <img src="./../images/sideImage.png" alt="lock image">
-    </div>
-    <div id="lock-suround">
-        <div>
-            <img id="security-left-image" src="./../images/security-image.png" alt="seccurity image" >
-            <img src="./../images/dot-images.png" alt="dot-image" >
+    <!-- Desktop Div -->
+    <div id="desktop-div" class="d-none d-md-block">
+        <nav class="top-nav-bar">
+            <img class="desktop-logo-red" id="onboarding-logo-red" src="./../images/logo-red.png" alt="lockey logo">
+            <ul class="top-nav-bar-link bg-pink">
+                <li><a href="#" >About Us</a></li>
+                <li><a href="#" >Contact Us</a></li>
+                <li><a href="#" >Login</a></li>
+            </ul>
+       </nav>
+    
+       <div id="onboarding-welcome-container">
+            <h1 class="pink-text">WELCOME</h1>
+            <img src="./../images/sideImage.png" alt="lock image">
         </div>
-        <div>
-            <img src="./../images/dot-images.png" alt="dot-image" >
-            <img id="connect-right-image" src="./../images/connect-image.png" alt="seccurity image" >
+        <div id="lock-suround">
+            <div>
+                <img id="security-left-image" src="./../images/security-image.png" alt="seccurity image" >
+                <img src="./../images/dot-images.png" alt="dot-image" >
+            </div>
+            <div>
+                <img src="./../images/dot-images.png" alt="dot-image" >
+                <img id="connect-right-image" src="./../images/connect-image.png" alt="seccurity image" >
+            </div>
+        </div>
+    
+        <div id="onboarding-quote-btn">
+            <p>Manage your passwords at your convenience in a secure vault</p>
+            <a class="bg-pink beige-text" id="get-started-button" href="#">Get Started -></a>
         </div>
     </div>
 
-    <div id="onboarding-quote">
-        <p>Manage your passwords at your convenience in a secure vault</p>
-        <button>Get Started</button>
-    </div>
-    <div id="onboarding-button">
+    <!-- Mobile Div -->
+    <div class="d-block d-md-none">
         
     </div>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
