@@ -46,6 +46,10 @@
     color:#E4E1D2;
 }
 
+.top-nav-bar-link a:hover{
+    color: black;
+}
+
 #onboarding-welcome-container{
     position: relative;
     margin-top:30px ;
@@ -162,7 +166,9 @@
     color:#E4E1D2;
     padding: 5px ;
 }
-
+#nav-bar-contents-mobile a:hover{
+    color: black;
+}
 
 
 
