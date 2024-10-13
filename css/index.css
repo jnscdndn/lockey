@@ -135,13 +135,11 @@
 .top-bottom-div{
     width: 40px;
     height: 10px;
-    /* background-color: #D90356; */
     border-radius: 5px 0 0 5px;
 }
 .middle-div{
     width: 30px;
     height: 10px;
-    /* background-color: #D90356; */
     border-radius: 5px 0 0 5px;
 }
 #nav-bar-contents-mobile{
