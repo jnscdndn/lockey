@@ -113,15 +113,16 @@
     border-radius: 0px 100px 100px 0;
     display: flex;
     align-items: center;
+    padding: 12px;
 }
 #onboarding-logo-white{
     display: block;
-    width: 200px;
+    width: 180px;
     height: auto;
 }
 
 .nav-icon-holder-mobile{
-    width: 20%;
+    width: 10%;
     height: auto;
     text-align: center;
     display: flex;
@@ -132,18 +133,40 @@
 }
 
 .top-bottom-div{
-    width: 50px;
+    width: 40px;
     height: 10px;
-    background-color: #D90356;
+    /* background-color: #D90356; */
     border-radius: 5px 0 0 5px;
 }
 .middle-div{
     width: 30px;
     height: 10px;
-    background-color: #D90356;
+    /* background-color: #D90356; */
     border-radius: 5px 0 0 5px;
 }
+#nav-bar-contents-mobile{
+    display: none;
+    background-color: #D90356;
+}
 
+#mobile-nav-bar-ul-tag{
+    list-style-type: none;
+    padding: 10px 5px;
+}
+
+#nav-bar-contents-mobile a{
+    display: block;
+    text-decoration: none;
+    text-transform:uppercase;
+    font-weight: bold;
+    color:#E4E1D2;
+    padding: 5px ;
+}
+
+
+
+
+/* Okay */
 #onboarding-welcome-container-mobile{
     position: relative;
     margin-top:30px ;
@@ -172,4 +195,21 @@
     text-align: center;
     font-size: 20px;
     text-align: center;
+}
+
+.get-started-btn-mobile-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: end;
+}
+#get-started-button-mobile{
+    display: block;
+    text-decoration: none;
+    display: block;
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 35px 0 0 35px;
+    font-weight: bold;
+    font-size: 20px;    
 }

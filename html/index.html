@@ -46,26 +46,36 @@
 
     <!-- Mobile Div -->
     <div class="d-block d-md-none">
-        <nav class="top-nav-bar-mobile">
+        <nav class="top-nav-bar-mobile" id="top-nav-bar-mobile">
             <div class="logo-container-mobile bg-pink" >            
                 <img class="desktop-logo-whiite" id="onboarding-logo-white" src="./../images/logo-white.png" alt="lockey logo">
             </div>
-            <div class="nav-icon-holder-mobile">
-                <div class="top-bottom-div"></div>
-                <div class="middle-div"></div>
-                <div class="top-bottom-div"></div>
+            <div class="nav-icon-holder-mobile" id="mobile-nav-icon-holder">
+                <div class="top-bottom-div bg-pink"></div>
+                <div class="middle-div bg-pink"></div>
+                <div class="top-bottom-div bg-pink"></div>
             </div>
+  
        </nav>
+       <div id="nav-bar-contents-mobile">
+        <ul class="" id="mobile-nav-bar-ul-tag">
+            <li><a href="#" >About Us</a></li>
+            <li><a href="#" >Contact Us</a></li>
+            <li><a href="#" >Login</a></li>
+        </ul>
+    </div>   
+       
         <div id="onboarding-welcome-container-mobile">
             <h1 class="pink-text">WELCOME</h1>
             <img src="./../images/sideImage.png" alt="lock image">
         </div>
-        <!-- <div id="onboarding-quote-mobile"> -->
-            <p id="onboarding-quote-mobile">Manage your passwords at your convenience in a secure vault</p>
-        <!-- </div> -->
+        <p id="onboarding-quote-mobile">Manage your passwords at your convenience in a secure vault</p>
+        <div class="get-started-btn-mobile-container"><a class="bg-pink beige-text" id="get-started-button-mobile" href="#">Get Started -></a></div>
 
     </div>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./../jQuery/jquery-3.7.1.min.js"></script>
+    <script src="./../js/index.js"></script>
 </body>
 
 </html>
