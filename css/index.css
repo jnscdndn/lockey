@@ -126,7 +126,7 @@
     height: auto;
     text-align: center;
     display: flex;
-    /* padding: 0 5px; */
+    cursor: pointer;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: end;
@@ -148,12 +148,14 @@
 }
 
 #mobile-nav-bar-ul-tag{
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
     padding: 10px 5px;
+    gap: 4px;
 }
 
 #nav-bar-contents-mobile a{
-    display: block;
     text-decoration: none;
     text-transform:uppercase;
     font-weight: bold;
@@ -167,7 +169,7 @@
 /* Okay */
 #onboarding-welcome-container-mobile{
     position: relative;
-    margin-top:30px ;
+    margin-top:18% ;
     text-align: center;
 }
 
