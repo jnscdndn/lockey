@@ -1,6 +1,5 @@
 let isNavOpen = false
 $("#mobile-nav-icon-holder").click(function(){
-    
     if(isNavOpen){
         $("#nav-bar-contents-mobile").slideToggle(function(){
             $("#top-nav-bar-mobile").removeClass("bg-pink");

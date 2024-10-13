@@ -44,10 +44,13 @@
     text-transform:uppercase;
     font-weight: bold;
     color:#E4E1D2;
+    padding: 10px  20px;
+    border-radius: 50px;
+    /* border: 1px solid black; */
 }
 
 .top-nav-bar-link a:hover{
-    color: black;
+    background-color: #c1024b;
 }
 
 #onboarding-welcome-container{
@@ -104,6 +107,9 @@
     border-radius: 35px 0 0 35px;
     font-weight: bold;
     font-size: 30px;
+}
+#get-started-button:hover{
+    background-color: #c1024b;
 }
 
 /* Mobile CSS */
@@ -164,15 +170,13 @@
     text-transform:uppercase;
     font-weight: bold;
     color:#E4E1D2;
-    padding: 5px ;
+    padding: 5px 20px;
+    border-radius: 20px;
 }
 #nav-bar-contents-mobile a:hover{
-    color: black;
+    background-color: #c1024b;
 }
 
-
-
-/* Okay */
 #onboarding-welcome-container-mobile{
     position: relative;
     margin-top:18% ;
@@ -218,4 +222,7 @@
     border-radius: 35px 0 0 35px;
     font-weight: bold;
     font-size: 20px;    
+}
+#get-started-button-mobile:hover{
+    background-color: #c1024b;
 }
