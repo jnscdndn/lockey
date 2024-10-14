@@ -153,8 +153,12 @@
     border-radius: 5px 0 0 5px;
 }
 #nav-bar-contents-mobile{
+    width: 100%;
+    position: absolute;
     display: none;
     background-color: #D90356;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+    z-index: 20;
 }
 
 #mobile-nav-bar-ul-tag{
