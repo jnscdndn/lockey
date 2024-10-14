@@ -46,7 +46,6 @@
     color:#E4E1D2;
     padding: 10px  20px;
     border-radius: 50px;
-    /* border: 1px solid black; */
 }
 
 .top-nav-bar-link a:hover{
@@ -57,6 +56,11 @@
     position: relative;
     margin-top:30px ;
     text-align: center;
+}
+@media (max-width: 1024px) {
+    #onboarding-welcome-container {
+        margin-top: 100px; /* Adjust margin for iPad view */
+    }
 }
 #onboarding-welcome-container h1{
     font-size: 130px;
@@ -89,6 +93,11 @@
     color: rgb(86, 81, 81);
     justify-content: space-between;
     align-items: center;
+}
+@media (max-width: 1024px) {
+    #onboarding-quote-btn{
+        margin-top: 200px; /* Adjust margin for iPad view */
+    }
 }
 #onboarding-quote-btn p{
     font-size: 25px;
