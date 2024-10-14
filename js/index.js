@@ -17,16 +17,6 @@ $("#mobile-nav-icon-holder").click(function(){
         isNavOpen = true
     }
 })
-let startY=0
-let endY=0
-menu.on('touchstart',function(e){
-    startY=e.originalEvent.touches[0].clientY
-})
-
-menu.on('touchmove',function(e){
-    endY=e.originalEvent.touches[0].clientY
-})
-
 menu.on('touchend',function(){
     menu.slideToggle(function(){
         $("#top-nav-bar-mobile").removeClass("bg-pink");
