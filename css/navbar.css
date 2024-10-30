@@ -1,0 +1,124 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    font-family: "Instrument Sans",sans-serif;
+
+}
+.pink-text{
+    color: #D90356;
+}
+.beige-text{
+    color: #E4E1D2;
+}
+.bg-pink{
+    background-color: #D90356;
+}
+.bg-beige{
+    background-color: #E4E1D2;
+}
+ /* Desktop CSS */
+.top-nav-bar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.desktop-logo-red {
+    margin-left: 20px;
+    width: 250px ;
+    height: auto ;
+}
+
+.top-nav-bar-link {
+    display: flex;
+    list-style: none;
+    /* gap:80px; */
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px 0;
+    border-radius: 35px 0 0 35px;
+}
+.top-nav-bar-link a {
+    display: inline-block;
+    margin:0 10px;
+    text-decoration: none;
+    text-transform:uppercase;
+    font-weight: bold;
+    color:#E4E1D2;
+    padding: 10px  20px;
+    border-radius: 50px;
+}
+
+.top-nav-bar-link a:hover{
+    background-color: #c1024b;
+}
+
+/*Mobile Nav*/
+
+.top-nav-bar-mobile{
+    display: flex;
+    justify-content: space-between;
+}
+.logo-container-mobile{
+    width: 80%; 
+    border-radius: 0px 100px 100px 0;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+#onboarding-logo-white{
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+.nav-icon-holder-mobile{
+    width: 10%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: end;
+}
+
+.top-bottom-div{
+    width: 40px;
+    height: 10px;
+    border-radius: 5px 0 0 5px;
+}
+.middle-div{
+    width: 30px;
+    height: 10px;
+    border-radius: 5px 0 0 5px;
+}
+#nav-bar-contents-mobile{
+    width: 100%;
+    position: absolute;
+    display: none;
+    background-color: #D90356;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+    z-index: 20;
+}
+
+#mobile-nav-bar-ul-tag{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 10px 5px;
+    gap: 4px;
+}
+
+#nav-bar-contents-mobile a{
+    text-decoration: none;
+    text-transform:uppercase;
+    font-weight: bold;
+    color:#E4E1D2;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+#nav-bar-contents-mobile a:hover{
+    background-color: #c1024b;
+}
