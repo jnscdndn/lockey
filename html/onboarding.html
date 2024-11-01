@@ -14,7 +14,7 @@
         <link rel="shortcut icon" type="image/x-icon"
             href="./../images/lockey-logo-square.png" />
     </head>
-    <body class="background-body-white">
+    <body class="back-primary-white">
         <nav class="d-none d-md-flex full-navbar">
             <img src="./../images/Lockey-logo-name.png"
                 class="nav-logo-image-full-desktop" alt="lockey logo">
@@ -30,25 +30,42 @@
             <a href="#" class="nav-links-desktop txt-primary-dark">Login</a> -->
             </div>
         </nav>
+        <!-- Mobile nav bar -->
+        <div class="d-block d-md-none">
+            <nav class="full-navbar" id="top-nav-bar-mobile">
+                <img
+                    src="./../images/Lockey-logo-name.png"
+                    class="nav-logo-image-full-mobile" alt="lockey logo">
 
-        <nav class="d-flex d-md-none full-navbar" id="top-nav-bar-mobile">
-            <img
-                src="./../images/Lockey-logo-name.png"
-                class="nav-logo-image-full-mobile" alt="lockey logo">
-
-            <div class="nav-icon-holder-mobile" id="mobile-nav-icon-holder">
-                <div class="top-bottom-div back-prime"></div>
-                <div class="middle-div back-prime"></div>
-                <div class="top-bottom-div back-prime"></div>
+                <div class="nav-icon-holder-mobile" id="mobile-nav-icon-holder">
+                    <div class="top-bottom-div back-prime"></div>
+                    <div class="middle-div back-prime"></div>
+                    <div class="top-bottom-div back-prime"></div>
+                </div>
+            </nav>
+            <div class="nav-links-container-mobile back-primary-white"
+                id="nav-bar-contents-mobile">
+                <a href="#" class="nav-links-mobile txt-primary-dark">About
+                    Us</a>
+                <a href="#" class="nav-links-mobile txt-primary-dark">Contact
+                    Us</a>
+                <a href="#" class="nav-links-mobile txt-primary-dark">Login</a>
             </div>
-        </nav>
-        <div id="d-block d-md-none">
-            <ul class id="mobile-nav-bar-ul-tag">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
         </div>
+
+
+        <!-- body -->
+         <div class="row mt-5">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <h1 class="text-center display-1 fw-bolder">WELCOME</h1>
+            </div>
+
+
+         </div>
+
+        <script src="./../jQuery/jquery-3.7.1.min.js"></script>
+        <script src="../js/hamburger.js"></script>
         <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     </body>
-    </html>
+</html>
