@@ -6,22 +6,25 @@
 }
 
 .txt-prime{
-    color:#FF4522;
+    color:#FF4522 !important;
 }
 .txt-primary-dark{
-    color:#1E1E1E;
+    color:#1E1E1E !important;
+}
+.txt-secondary-dark{
+    color:#373636 !important;
 }
 .txt-primary-white{
-    color:#ECF3FD;
+    color:#ECF3FD !important;
 }
 .back-prime{
-    background-color: #FF4522;
+    background-color: #FF4522 !important;
 }
 .back-primary-dark{
-    background-color: #1E1E1E;
+    background-color: #1E1E1E !important;
 }
 .back-primary-white{
-    background-color: #e7e9ec;
+    background-color: #e7e9ec !important;
 }
 
 .full-navbar{
