@@ -30,12 +30,17 @@
 .registeration-input{
     display: block;
     width: 100%;
-    padding: 4px;
+    padding: 7px;
     background-color: #ECF3FD;
-    font-weight: bolder;
-    border: 3px solid #1E1E1E;
+    font-weight: 600;
+    border: 1.5px solid #4a4949;
     border-radius: 10px;
     margin: 3px 0px 4px;
+}
+.registeration-input:focus {
+    border: 1.5px solid #FF4522;
+    box-shadow: 0 0 8px rgba(255, 69, 34, 0.7); /* Glowing effect */
+    outline: none; /* Remove default outline */
 }
 
 
@@ -49,3 +54,41 @@
     border-radius: 10px;
     margin: 3px 0px 4px;
 }
+
+.password-guidelines {
+    font-family: 'Poiret One', cursive;
+    color: #333;
+}
+
+.password-guidelines ul {
+    font-family: 'Poiret One', cursive;
+
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.password-guidelines ul li {
+    margin: 8px 0;
+    line-height: 1.8;
+}
+
+.password-guidelines ul li .highlight {
+    font-weight: bold;
+    color: #FF4522;
+}
+
+.password-guidelines ul li span {
+    font-style: italic;
+    color: #666;
+}
+
+.note {
+    font-style: italic;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 15px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poiret+One&display=swap');
