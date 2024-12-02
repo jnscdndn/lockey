@@ -3,7 +3,7 @@ let menu=$("#nav-bar-contents-mobile")
 $("#mobile-nav-icon-holder").click(function(){
     if(isNavOpen){
         menu.slideToggle(function(){
-            console.log("false")
+            // console.log("false")
             // $("#top-nav-bar-mobile").removeClass("bg-pink");
             // $("#mobile-nav-icon-holder div").addClass("bg-pink")
             // $("#mobile-nav-icon-holder div").removeClass("bg-beige")
@@ -12,7 +12,7 @@ $("#mobile-nav-icon-holder").click(function(){
     }
     else{
         menu.slideToggle()
-        console.log("true")
+        // console.log("true")
         // $("#top-nav-bar-mobile").addClass("bg-pink")
         // $("#mobile-nav-icon-holder div").removeClass("bg-pink")
         // $("#mobile-nav-icon-holder div").addClass("bg-beige")

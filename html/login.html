@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LOCKEY</title>
+        <link rel="stylesheet" href="./../css/properties.css">
+        <link rel="stylesheet" href="./../bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../css/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon"
+            href="./../images/lockey-logo-square.png" />
+    </head>
+    <body class="back-primary-white ">
+        <nav class="d-none d-md-flex full-navbar">
+            <img src="./../images/Lockey-logo-name.png"
+                class="nav-logo-image-full-desktop" alt="lockey logo">
+
+            <div class="nav-links-container-desktop">
+                <a href="onboarding.html"
+                    class="nav-links-desktop txt-primary-dark">Home</a>
+            </div>
+        </nav>
+        <!-- Mobile nav bar -->
+        <div class="d-block d-md-none ">
+            <nav class="full-navbar" id="top-nav-bar-mobile">
+                <img
+                    src="./../images/Lockey-logo-name.png"
+                    class="nav-logo-image-full-mobile" alt="lockey logo">
+
+                <div class="nav-icon-holder-mobile" id="mobile-nav-icon-holder">
+                    <div class="top-bottom-div back-prime"></div>
+                    <div class="middle-div back-prime"></div>
+                    <div class="top-bottom-div back-prime"></div>
+                </div>
+            </nav>
+            <div class="nav-links-container-mobile back-primary-white"
+                id="nav-bar-contents-mobile">
+                <a href="onboarding.html"
+                    class="nav-links-mobile txt-primary-dark">Home</a>
+                <a href="registration.html"
+                    class="nav-links-mobile txt-primary-dark">Register</a>
+
+            </div>
+        </div>
+
+        <div class="row g-0 mt-5 py-5">
+            <form action="" method="post" id="register-form"  class="col-md-6">
+                <div class="form-container m-md-4 p-4">
+                    <div class="col-md-10 row mx-auto">
+                        <p class=" form-heading-accout-create">Login to Your
+                            Account...</p>
+                        <!-- Name Input -->
+                        <div>
+                            <label
+                                class="registeration-label txt-secondary-dark"
+                                for="emial">Email</label>
+                            <input
+                                class="registeration-input txt-secondary-dark back-primary-white"
+                                type="text" name="email" id="email">
+                            <p class="error-label" id="email-error"></p>
+                        </div>
+                        <div>
+                            <label
+                                class="registeration-label txt-secondary-dark"
+                                for="password">Password</label>
+                            <input
+                                class="registeration-input txt-secondary-dark back-primary-white"
+                                type="password" name="password" id="password">
+                            <p class="error-label" id="password-error"></p>
+
+                        </div>
+                        <input
+                            class="get-started-btn btn back-prime p-3 fs-5 txt-primary-white fw-bold border rounded-pill mt-2 mb-3"
+                            type="submit" name="login" value="Login ->">
+                    </div>
+                </div>
+            </form>
+            <div class="col-5 d-none d-md-block my-auto ms-auto">
+                <h1 class="txt-prime text-center fw-bolder display-1">New Here?</h1>
+                <a href="register.html"
+                    class="get-started-btn btn back-prime p-3 fs-4 txt-primary-white fw-bold border rounded-start-pill px-5 ms-auto d-block w-75">Register
+                    -></a>
+            </div>
+        </div>
+
+        <script src="./../jQuery/jquery-3.7.1.min.js"></script>
+        <script src="../js/hamburger.js"></script>
+        <script src="../js/login.js"></script>
+        <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
