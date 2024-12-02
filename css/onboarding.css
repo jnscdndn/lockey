@@ -24,13 +24,14 @@
     font-size: clamp(1rem, 2vw, 1.25rem);
 }
 .get-started-btn{
-    transition: transform 0.5s ease;
+    transition: transform 0.7s ease;
     border: 3px solid #FF4522 !important;
 
 }
 .get-started-btn:hover{
-    background-color: #e7e9ec !important ;
+    /* background-color: #e7e9ec !important ; */
+    background-color: #fad6cf !important;
     color: #1E1E1E !important;
-    border: 3px solid #FF4522 !important;
+    border: 1px solid #FF4522 !important;
 }
 

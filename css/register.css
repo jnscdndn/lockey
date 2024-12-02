@@ -1,0 +1,51 @@
+.form-container {
+    border-radius: 15px; 
+}
+
+@media (min-width: 768px) {
+    .form-container {
+        border: 4px solid #FF4522;
+    }
+}
+
+.form-heading-accout-create{
+    font-size: 35px;
+    color: #FF4522;
+    font-weight: bold;
+}
+@media (max-width: 767px) {
+    .form-heading-accout-create{
+        font-size: 25px;
+        color: #FF4522;
+        font-weight: bold;
+    }
+}
+.registeration-label{
+    display: block;
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.registeration-input{
+    display: block;
+    width: 100%;
+    padding: 4px;
+    background-color: #ECF3FD;
+    font-weight: bolder;
+    border: 3px solid #1E1E1E;
+    border-radius: 10px;
+    margin: 3px 0px 4px;
+}
+
+
+.form-btns{
+    display: block;
+    width: 100%;
+    padding: 4px;
+    background-color: #FF4522;
+    font-weight: bolder;
+    border: 3px solid #FF4522;
+    border-radius: 10px;
+    margin: 3px 0px 4px;
+}
