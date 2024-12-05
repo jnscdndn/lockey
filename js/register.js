@@ -1,20 +1,51 @@
+$("#toggle-password").click(function(){
+    const passwordInput = $('#password');
+    const icon = $(this); 
+
+    if (passwordInput.attr('type') === 'password') {
+        passwordInput.attr('type', 'text');
+        icon.removeClass('bi-eye-slash')
+        icon.addClass('bi-eye');
+    } else {
+        passwordInput.attr('type', 'password'); 
+        icon.removeClass('bi-eye')
+        icon.addClass('bi-eye-slash');
+    }
+});
+
+$("#toggle-cnf-password").click(function(){
+    const passwordInput = $('#cnf-password');
+    const icon = $(this); 
+
+    if (passwordInput.attr('type') === 'password') {
+        passwordInput.attr('type', 'text');
+        icon.removeClass('bi-eye-slash')
+        icon.addClass('bi-eye');
+    } else {
+        passwordInput.attr('type', 'password'); 
+        icon.removeClass('bi-eye')
+        icon.addClass('bi-eye-slash');
+    }
+});
+
 $('#register-form').submit(function(e) {
     let fname = $("#fname").val();
     let lname = $("#lname").val();
     let email = $("#email").val();
+    let otp = $("#otp").val();
     let mobile = $("#mobile").val();
     let password = $("#password").val();
     let cnf_password = $("#cnf-password").val();
-    
     iserror=false;
+    isvalidate=false;
+
 
     if(fname==""){
         $('#fname-error').text("Please enter your first name");
         iserror=true;
-    // }else if(fname.match(/[~`@#$%^&*()-_=+/?><,]/)){
-    //     console.log(fname.match(/[~`!@#$%^&*()-_=+/?><,]/))
-    //     $('#fname-error').text("Name can only contain alphabets and (.)");
-    //     iserror=true;
+    }else if(lname.match(/[@#$().<>!~+?,=_-`]/)){
+        $('#fname-error').text("Name can only contain alphabets and (.)");
+        iserror=true;
     }else{
         $('#fname-error').text("");
     }
@@ -22,10 +53,9 @@ $('#register-form').submit(function(e) {
     if(lname==""){
         $('#lname-error').text("Please enter your last name");
         iserror=true;
-    // }else if(lname.match(/[~`!@#$%^&*()-_=+/?><,]/)){
-    //     console.log(lname.match(/[~`!@#$%^&*()-_=+/?><,]/))
-    //     $('#lname-error').text("Name can only contain alphabets and (.)");
-    //     iserror=true;
+    }else if(lname.match(/[@#$().<>!~+?,=_-`]/)){
+        $('#lname-error').text("Name can only contain alphabets and (.)");
+        iserror=true;
     }else{
         $('#lname-error').text("");
     }
@@ -39,7 +69,10 @@ $('#register-form').submit(function(e) {
     }else{
         $('#email-error').text("");
     }
-
+    if(otp==""){
+        $('#otp-error').text("Please enter your email");
+        iserror=true;
+    }
     
     if(mobile==""){
         $('#mobile-error').text("Please enter your mobile number");
@@ -74,7 +107,7 @@ $('#register-form').submit(function(e) {
     }
 
 
-    if(iserror){
+    if(iserror && !isvalidate){
         e.preventDefault();
     }
     
