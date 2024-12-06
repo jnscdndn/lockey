@@ -1,4 +1,5 @@
 <?php 
+    // echo "Connected";
     require_once "connection.php";
     if(isset($_POST['email'])){
         $email = $_POST['email'];
@@ -19,7 +20,7 @@
         } catch (Exception $e){
             die($conn->error);
         } finally{
-            echo $data;
+            echo json_encode($data);
             $conn->close();
         }
     }
