@@ -1,3 +1,5 @@
+console.log("Yes");
+
 $("#send_otp").click(function(){
     let email=$("#email").val();
     
@@ -16,7 +18,7 @@ $("#send_otp").click(function(){
             success:function(data){
                 data = JSON.parse(data);
                 if(data['status']=="success"){
-                    console.log("HERE");
+                    console.log("YES");
                     
                     $("#send_otp").text("Otp Sent");
                     $("#email").prop('disabled', true);
