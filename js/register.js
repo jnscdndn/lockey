@@ -1,3 +1,6 @@
+console.log("Lauda lassan");
+
+
 $("#toggle-password").click(function(){
     const passwordInput = $('#password');
     const icon = $(this); 
@@ -104,8 +107,11 @@ $('#register-form').submit(function(e) {
         iserror=true;
     }else{
         $('#cnf-password-error').text("");
+        let enc_password = password;
+        
     }
 
+    
 
     if(iserror && !isvalidate){
         e.preventDefault();

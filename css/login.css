@@ -42,6 +42,11 @@
     box-shadow: 0 0 8px rgba(255, 69, 34, 0.7); /* Glowing effect */
     outline: none; /* Remove default outline */
 }
+.registeration-input:hover {
+    /* border: 1.5px solid #FF4522; */
+    box-shadow: 0 0 8px rgba(255, 69, 34, 0.7); /* Glowing effect */
+    outline: none; /* Remove default outline */
+}
 
 
 .password-guidelines {
@@ -82,7 +87,6 @@
 
 .error-label{
     color: #FF4522;
-    /* margin: 0px */
 }
 
 

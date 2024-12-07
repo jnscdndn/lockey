@@ -49,8 +49,9 @@
             </div>
         </div>
 
+        <!-- FORM -->
         <div class="row g-0">
-            <form action="" method="post" id="register-form"  class="col-lg-7">
+            <form action="./../php/adduser.php" method="post" id="register-form"  class="col-lg-7">
                 <div class="form-container m-md-4 p-4">
                     <div class="col-lg-11 row mx-auto">
                         <p class=" form-heading-accout-create">Create A New
@@ -162,6 +163,7 @@
                             <p class="note">Your password is your digital
                                 shield—wield it wisely! 🛡️</p>
                         </div>
+                        <input type="password" name="encrypted_password" id="encrypted_password" hidden>
                         <input
                             class="get-started-btn btn back-prime p-3 fs-5 txt-primary-white fw-bold border rounded-pill mb-3"
                             type="submit" name="register" value="Register ->">
