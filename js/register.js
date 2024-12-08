@@ -1,5 +1,3 @@
-console.log("Lauda lassan");
-
 
 $("#toggle-password").click(function(){
     const passwordInput = $('#password');
@@ -73,7 +71,7 @@ $('#register-form').submit(function(e) {
         $('#email-error').text("");
     }
     if(otp==""){
-        $('#otp-error').text("Please enter your email");
+        $('#otp-error').text("Please enter your OTP and Verify");
         iserror=true;
     }
     
