@@ -1,3 +1,6 @@
+let otpSend=false;
+let otp;
+let verified=false;
 $("#send_otp").click(function () {
     let email = $("#email").val();
     console.log(email);
@@ -10,10 +13,9 @@ $("#send_otp").click(function () {
         return;
     }
     $("#email-error").text("");
-    length=6
-    num=Math.random()
+    let length=6
+    let num=Math.random()
     otp=Math.floor(Math.pow(10,length-1)+num*(Math.pow(10,length)-1))
-    console.log(otp)
     $.ajax({
         url: "./../php/emailVerification.php",
         method: "POST",
@@ -23,11 +25,13 @@ $("#send_otp").click(function () {
         },
         success: function (data) {
             console.log(data);
-            
             data = JSON.parse(data);
             if (data['status'] === "success") {
+                otpSend=true
                 $("#send_otp").text("Otp Sent");
                 startTimer();
+            } else{
+                
             }
         }
     });
@@ -59,3 +63,24 @@ function startTimer() {
         }
     }, 1000);
 }
+
+
+$("#verify").click(()=>{
+    if(otpSend){
+        if ($("#otp").val()==otp){
+            $("#send_otp").prop("disabled", true).css({
+                "cursor": "not-allowed",
+            });
+            $("#verify").prop("disabled", true).css({
+                "cursor": "not-allowed",
+            });
+            $("#email").prop("readonly", true).css({
+                "cursor": "not-allowed",
+            });
+            $("#otp").prop("disabled", true).css({
+                "cursor": "not-allowed",
+            });  
+            verified=true;
+        }
+    }
+})

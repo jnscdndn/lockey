@@ -104,7 +104,7 @@
                         <div class="col-md-4 d-flex align-items-end">
                             <button
                                 type="button"
-                                class="form-btns txt-primary-white">Verify</button>
+                                class="form-btns txt-primary-white" id="verify">Verify</button>
                         </div>
                         <p class="error-label" id="otp-error"></p>
 
@@ -140,7 +140,6 @@
                                     class="registeration-input txt-secondary-dark back-primary-white"
                                     type="password" name="cnf-password" id="cnf-password">
                                 <i class="bi bi-eye-slash txt-prime fs-5" id="toggle-cnf-password" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
-
                             </div>
                             
                             <p class="error-label" id="cnf-password-error"></p>
@@ -178,11 +177,11 @@
                     -></a>
             </div>
         </div>
+        <script src="../js/cryptoJs/crypto-js.min.js"></script>
         <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="./../jQuery/jquery-3.7.1.min.js"></script>
         <script src="../js/hamburger.js"></script>
         <script src="../js/register.js"></script>
         <script src="../js/emailVerification.js"></script>
-        <!-- <script src="../js/email_verifivation.js"></script> -->
     </body>
 </html>

@@ -38,7 +38,6 @@ $('#register-form').submit(function(e) {
     let password = $("#password").val();
     let cnf_password = $("#cnf-password").val();
     iserror=false;
-    isvalidate=false;
 
 
     if(fname==""){
@@ -60,7 +59,8 @@ $('#register-form').submit(function(e) {
     }else{
         $('#lname-error').text("");
     }
-
+    console.log(email);
+    
     if(email==""){
         $('#email-error').text("Please enter your email");
         iserror=true;
@@ -98,20 +98,19 @@ $('#register-form').submit(function(e) {
     }
     
     if(cnf_password==""){
-        $('#cnf-password-error').text("Please enter your cnf-password again");
+        $('#cnf-password-error').text("Please enter your cnfirm password again");
         iserror=true;
     }else if(cnf_password != password){
         $('#cnf-password-error').text("Password and confirm password must be same");
         iserror=true;
     }else{
+        console.log("enter");
         $('#cnf-password-error').text("");
-        let enc_password = password;
-        
+        const hash = CryptoJS.SHA256(password).toString();
+        $("#encrypted_password").val(hash);
+        console.log(hash);
     }
-
-    
-
-    if(iserror && !isvalidate){
+    if(iserror && !verified){
         e.preventDefault();
     }
     

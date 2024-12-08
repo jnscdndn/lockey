@@ -1,5 +1,4 @@
-<?php 
-    echo"Hello";
+<?php
     if(!isset($_POST['register'])){
         header("location:./../html/register.html");
     }
@@ -8,7 +7,7 @@
     $lname = $_POST['lname'];
     $email = $_POST['email'];
     $mobile = $_POST['mobile'];
-    $password = $_POST['password'];
+    $password = $_POST['encrypted_password'];
     try{
         $qry = "INSERT INTO users(first_name,last_name,email,mobile,password) VALUES(?,?,?,?,?)";
         $stmt = $conn->prepare($qry);
@@ -19,7 +18,7 @@
         } else{
             ?>
                 <script>
-                    alert("Some error has occured");
+                    alert("<?php echo $conn->error;  ?>");
                     window.location="./../html/register.html";
                 </script>
             <?php
@@ -28,6 +27,6 @@
     } catch (Exception $e){
         die($conn->error);
     } finally{
-        echo json_encode($data);
+        $conn->close();
     }
 ?>
