@@ -49,7 +49,7 @@
         </div>
 
         <div class="row g-0 mt-5 py-5">
-            <form action="" method="post" id="register-form"  class="col-lg-6">
+            <form action="./../php/dashboard.php" method="post" id="login-form"  class="col-lg-6">
                 <div class="form-container m-md-4 p-4">
                     <div class="col-md-10 row mx-auto">
                         <p class=" form-heading-accout-create">Login to Your
@@ -72,7 +72,7 @@
                                 class="registeration-input txt-secondary-dark back-primary-white"
                                 type="password" name="password" id="password">
                             <p class="error-label" id="password-error"></p>
-
+                            <input type="password" name="encrypted_password" id="encrypted_password" hidden>
                         </div>
                         <input
                             class="login-btn btn back-prime p-3 fs-5 txt-primary-white fw-bold border rounded-pill mt-2 mb-3"
@@ -87,7 +87,7 @@
                     -></a>
             </div>
         </div>
-
+        <script src="../js/cryptoJs/crypto-js.min.js"></script>
         <script src="./../jQuery/jquery-3.7.1.min.js"></script>
         <script src="../js/hamburger.js"></script>
         <script src="../js/login.js"></script>
