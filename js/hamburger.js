@@ -21,5 +21,6 @@ $("#mobile-nav-icon-holder").click(function(){
 })
 menu.click(function(){
     menu.slideToggle()
+    menu.
     isNavOpen = false
 })

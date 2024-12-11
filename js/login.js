@@ -1,5 +1,5 @@
 $("#login-form").submit((e)=>{
-    // e.preventDefault();
+    e.preventDefault();
     let email = $("#email").val();
     let password = $("#password").val();
     let iserror = false
@@ -28,7 +28,7 @@ $("#login-form").submit((e)=>{
         $("#encrypted_password").val(pass_hash);
     }
     if(iserror){
-        e.preventDefault();
+        // e.preventDefault();
     } else{
         $.ajax({
             url:"./../php/login.php",
@@ -37,10 +37,14 @@ $("#login-form").submit((e)=>{
             success:(data)=>{
                 try{
                     data = JSON.parse(data);
+                    // console.log(data);
+                    
                     if(data['status']=="success"){
-                        console.log("Success");
-                        
+                        // console.log("Success");
+                        window.location="./home.html"
                     } else{
+                        // console.log("Error");
+                        
                         if(data['invalid']=="email"){
                             $("#email-error").text("Email is not registered");
                         } else if(data['invalid']=="password"){
@@ -49,9 +53,7 @@ $("#login-form").submit((e)=>{
                     }
                 }catch(Error){
                     console.log(Error);
-                    console.log(data);
-                    
-                    
+                    console.log(data);     
                 }
             }
             

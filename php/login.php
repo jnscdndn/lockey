@@ -18,6 +18,7 @@
                 $data['status']="success";
                 session_start();
                 $_SESSION['email']=$email;
+                $_SESSION['name']=$rs['first_name'];
             }
         } else{
             $data['status']="error";
