@@ -1,6 +1,7 @@
 
 .search-container{
-    margin-top: 90px;
+    /* margin-top: 90px; */
+    width:70%;
 }
 .search-input {
     display: block;
@@ -18,7 +19,8 @@
 }
 
 .search-btn{
-    padding: 11px;
+    padding: 7px;
+    /* width: 5px; */
 }
 
 .top-scroll-container{
@@ -59,4 +61,8 @@
     cursor: pointer;
     width: 150px;
     height: 45px;
+}
+
+.nav-below-object{
+    margin-top: 80px;
 }

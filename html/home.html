@@ -21,7 +21,19 @@
         <nav class="d-none d-lg-flex full-navbar">
             <img src="./../images/Lockey-logo-name.png"
                 class="nav-logo-image-full-desktop" alt="lockey logo">
-
+        
+        <!-- SEARCH BAR -->
+         <form class="search-container">
+            <div class="row g-0">
+               <div class="col-1 col-md-2"></div>
+                <div class="col-10 col-md-8 d-flex back-prime-secondary align-items-center border rounded">
+                    <i class="bi bi-search txt-prime fw-bolder fs-3 p-1 ps-2"></i>
+                    <input type="text" class="search-input border-0" placeholder="Seach">
+                </div>
+                
+             </div>
+        </form>
+        <!-- SEARCH BAR END -->
             <div class="nav-links-container-desktop">
                 <a href="home.html"
                     class="nav-links-desktop txt-primary-dark">Home</a>
@@ -44,6 +56,18 @@
             </nav>
             <div class="nav-links-container-mobile back-primary-white"
                 id="nav-bar-contents-mobile">
+                <!-- SEARCH BAR -->
+                <form class="search-container">
+                    <div class="row g-0">
+                    <div class="col-1 col-md-2"></div>
+                        <div class="col-10 col-md-8 d-flex back-prime-secondary align-items-center border rounded">
+                            <i class="bi bi-search txt-prime fw-bolder fs-3 p-1 ps-2"></i>
+                            <input type="text" class="search-input border-0" placeholder="Seach">
+                        </div>
+                        
+                    </div>
+                </form>
+                <!-- SEARCH BAR END -->
                 <a href="home.html"
                     class="nav-links-mobile txt-primary-dark">Home</a>
                 <a href="./../php/logout.php"
@@ -52,17 +76,7 @@
             </div>
         </div>
         <!-- NAV BAR END -->
-        <!-- SEARCH BAR -->
-         <form class="search-container">
-             <div class="row g-0">
-                <div class="col-1 col-md-2"></div>
-                 <div class="col-10 col-md-8 d-flex back-prime-secondary align-items-center border rounded">
-                     <i class="bi bi-search txt-prime fw-bolder fs-3 p-1 ps-2"></i>
-                     <input type="text" class="search-input border-0" placeholder="Seach">
-                 </div>
-                 
-              </div>
-         </form>
+
         <!-- TOP SCROLL BAR START -->
         <div class="top-scroll-container nav-below-object" id="featureList"> </div>
         
@@ -74,6 +88,7 @@
         <script src="./../jQuery/jquery-3.7.1.min.js"></script>
         <script src="../js/hamburger.js"></script>
         <script src="../js/home.js"></script>
+        <script src="../js/fetchall.js"></script>
         <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
