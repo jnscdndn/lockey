@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./../css/home.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
             rel="stylesheet">
@@ -51,26 +52,22 @@
             </div>
         </div>
         <!-- NAV BAR END -->
+        <!-- SEARCH BAR -->
+         <form class="search-container">
+             <div class="row g-0">
+                <div class="col-1 col-md-2"></div>
+                 <div class="col-10 col-md-8 d-flex back-prime-secondary align-items-center border rounded">
+                     <i class="bi bi-search txt-prime fw-bolder fs-3 p-1 ps-2"></i>
+                     <input type="text" class="search-input border-0" placeholder="Seach">
+                 </div>
+                 
+              </div>
+         </form>
         <!-- TOP SCROLL BAR START -->
-        <div class="top-scroll-container nav-below-object">
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-            <a href="#" class="back-prime txt-primary-white scrollable-content">Favourites</a>
-        </div>
-        <h1 id="welcome-tag"></h1>
-
+        <div class="top-scroll-container nav-below-object" id="featureList"> </div>
+        
+        <!-- <h1 id="welcome-tag"></h1> -->
+        <button class="add-btn back-prime txt-primary-white"><i class="bi bi-plus-lg"></i> New</button>
 
 
         <script src="../js/cryptoJs/crypto-js.min.js"></script>
