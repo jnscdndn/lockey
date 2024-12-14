@@ -59,12 +59,7 @@ function startTimer() {
 
         if (timeLeft <= 0) {
             clearInterval(interval); 
-            btn.prop("disabled", false).text("Resend OTP").css({
-                "background-color": "#FF4522",
-                "cursor": "pointer",
-                "color": "#fff",
-                "border-color": "#FF4522"
-            });
+            btn.prop("disabled", false).text("Resend OTP")
         }
     }, 1000);
 }

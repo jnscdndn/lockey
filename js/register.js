@@ -97,10 +97,10 @@ $('#register-form').submit(function(e) {
         $('#password-error').text("");
     }
     
-    if(cnf_password==""){
+    if(cnf_password===""){
         $('#cnf-password-error').text("Please enter your cnfirm password again");
         iserror=true;
-    }else if(cnf_password != password){
+    }else if(cnf_password !== password){
         $('#cnf-password-error').text("Password and confirm password must be same");
         iserror=true;
     }else{
