@@ -31,7 +31,7 @@ $("#send_otp").click(function () {
                 $("#send_otp").text("Otp Sent");
                 startTimer();
             } else{
-                
+                $("#email-error").text("Email already exists");
             }
         }
     });
