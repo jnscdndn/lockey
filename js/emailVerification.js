@@ -51,6 +51,11 @@ function startTimer() {
     const interval = setInterval(() => {
         timeLeft--;
         btn.text(`Resend in ${timeLeft}s`);
+        btn.removeClass("back-prime")
+        btn.removeClass("txt-primary-white")
+
+        btn.addClass("back-prime-secondary")
+        btn.addClass("txt-primary-dark")
 
         if (timeLeft <= 0) {
             clearInterval(interval); 
@@ -68,6 +73,24 @@ function startTimer() {
 $("#verify").click(()=>{
     if(otpSend){
         if ($("#otp").val()==otp){
+            console.log("enter");
+            
+            $("#verify").text("Verified")
+            $("#verify").removeClass("back-prime")
+            $("#verify").removeClass("txt-primary-white")
+
+            $("#verify").addClass("back-prime-secondary")
+            $("#verify").addClass("txt-primary-dark")
+            
+
+
+            $("#send_otp").removeClass('back-prime')
+            $("#send_otp").removeClass("txt-primary-white")
+
+            $("#send_otp").addClass("back-prime-secondary")
+            $("#send_otp").addClass("txt-primary-dark")
+
+
             $("#send_otp").prop("disabled", true).css({
                 "cursor": "not-allowed",
             });

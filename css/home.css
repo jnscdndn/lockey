@@ -1,7 +1,6 @@
 
-.search-container{
-    /* margin-top: 90px; */
-    width:70%;
+.search-container-desktop{
+    margin-top: 80px;
 }
 .search-input {
     display: block;
@@ -63,6 +62,12 @@
     height: 45px;
 }
 
-.nav-below-object{
-    margin-top: 80px;
+.nav-below-object {
+    margin-top: 0; 
+}
+
+@media (min-width: 992px) {
+    .nav-below-object {
+        margin-top: 90px;
+    }
 }

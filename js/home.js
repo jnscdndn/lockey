@@ -33,8 +33,7 @@ $(document).ready(()=>{
                     str+=`<a href="${element.link}" class="txt-secondary-dark scrollable-content">${element.name}</a>`
                 });
                 console.log(str);
-                $("#featureList").html(str)
-                
+                $("#featureList").html(str);
             } catch(error){
                 console.log(error);
             }
