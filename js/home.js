@@ -1,6 +1,5 @@
 $(document).ready(()=>{
     // console.log("at home");
-    
     $.ajax({
         url:"./../php/loggedincheck.php",
         method:"get",
@@ -32,7 +31,7 @@ $(document).ready(()=>{
                 data.forEach(element => {
                     str+=`<a href="${element.link}" class="txt-secondary-dark scrollable-content">${element.name}</a>`
                 });
-                console.log(str);
+                // console.log(str);
                 $("#featureList").html(str);
             } catch(error){
                 console.log(error);

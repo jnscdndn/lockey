@@ -1,5 +1,11 @@
 $(document).ready(()=>{
-    console.log("Displaying Data");
     // CALL DB AND GET ALL PASSWORDS
+    $.ajax({
+        url:"./../php/getallpasswords.php",
+        method:"get",
+        success:(data)=>{
+            console.log(data);
+        }
+    })
 })
 
