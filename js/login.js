@@ -1,3 +1,33 @@
+
+$("#toggle-password").click(function(){
+    const passwordInput = $('#password');
+    const icon = $(this); 
+
+    if (passwordInput.attr('type') === 'password') {
+        passwordInput.attr('type', 'text');
+        icon.removeClass('bi-eye-slash')
+        icon.addClass('bi-eye');
+    } else {
+        passwordInput.attr('type', 'password'); 
+        icon.removeClass('bi-eye')
+        icon.addClass('bi-eye-slash');
+    }
+});
+
+$("#toggle-cnf-password").click(function(){
+    const passwordInput = $('#cnf-password');
+    const icon = $(this); 
+
+    if (passwordInput.attr('type') === 'password') {
+        passwordInput.attr('type', 'text');
+        icon.removeClass('bi-eye-slash')
+        icon.addClass('bi-eye');
+    } else {
+        passwordInput.attr('type', 'password'); 
+        icon.removeClass('bi-eye')
+        icon.addClass('bi-eye-slash');
+    }
+});
 $("#login-form").submit((e)=>{
     e.preventDefault();
     let email = $("#email").val();
