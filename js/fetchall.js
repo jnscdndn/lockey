@@ -71,7 +71,7 @@ function show_details(element) {
     $("#edit-user-details-btn").click(()=>{
         $('#detail-modal').css('display', 'none');
         $('#passwords-display').css('display', 'none');
-        populate_details(element)
+        populateDetails(element);
     })
 
 }
