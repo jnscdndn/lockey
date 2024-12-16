@@ -14,21 +14,19 @@ $("#updated-toggle-password").click(function(){
     }
 });
 
-var form_hidden=true;
 $("#add-password-btn").click(()=>{
-    if(form_hidden){
         $("#add-passwords").removeClass("d-none");
         $("#passwords-display").addClass("d-none");
-        $("#add-password-btn").text("Back");
-        form_hidden=false;
-    } else{
-        $("#passwords-display").removeClass("d-none");
-        $("#add-passwords").addClass("d-none");
-        $("#add-password-btn").html("<i class='bi bi-plus-lg'></i> New");
-        form_hidden=true;
-    }
-})
+        $('#add-password-btn').addClass("d-none");
+        $("#featureList").addClass("d-none");
+    })
+    $('#add-close').click(()=>{
+        $("#passwords-display").removClass("d-none");  
+        $('#add-passwords').addClass("d-none");
+        $("#featureList").removeClass("d-none");
+        $('#add-password-btn').removeClass("d-none");
 
+});
 $("#password-form").submit((e)=>{
     e.preventDefault();
     let appname = $("#app-name").val();

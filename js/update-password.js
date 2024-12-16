@@ -17,6 +17,9 @@ populateDetails=(element)=>{
     // $("#passwords-display").addClass("d-none");
     $("#update-password").removeClass("d-none");
     $("#update-password").addClass("d-block");
+    $("#featureList").addClass("d-none");
+    $('#add-password-btn').addClass("d-none");
+    
     let data=element;
     $("#updated-id").val(data['id']);
     $("#updated-app-name").val(data['name']);
@@ -33,10 +36,8 @@ populateDetails=(element)=>{
 
 $("#update-password-form").submit((e)=>{
     let appname = $("#updated-app-name").val();
-    let url = $("#updated-url").val();
     let username = $("#updated-username").val();
     let password = $("#updated-password").val();
-    let note = $("#updated-note").val();
     let check = $("#updated-favourite");
     let favourite = "no";
     if(check.is(":checked")){

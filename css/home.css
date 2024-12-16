@@ -86,6 +86,9 @@
     .nav-below-object {
         margin-top: 90px;
     }
+    .form-top{
+        margin-top:130px;
+    }
 }
 
 
@@ -113,7 +116,7 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
   
-  .modal .close {
+  .close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -121,6 +124,14 @@
     cursor: pointer;
   }
   .modal p,a{
+    cursor: pointer;
+  }
+
+  .cross{
+    position: relative;
+    margin-left: 95%;
+    margin-top: 10%;
+    font-size: 20px;
     cursor: pointer;
   }
  

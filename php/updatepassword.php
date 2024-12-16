@@ -10,7 +10,13 @@
             $password = $_POST['updated-encrypted_password'];
             $username = $_POST['updated-username'];
             $note = $_POST['updated-note'];
-            $favourite = $_POST['updated-favourite'];
+            if(isset($_POST['updated-favourite'])){
+                $favourite='yes';
+            }else{
+                $favourite="no";
+            }
+            
+
             try{
                 $qry = "UPDATE passwords set email=?,name=?,url=?,password=?,username=?,note=?,favourite=? WHERE id=?";
                 $stmt = $conn->prepare($qry);

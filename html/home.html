@@ -98,7 +98,7 @@
                     </div>
                     <div class="mt-4">
                         <p id="launch"><i class="bi bi-rocket-takeoff-fill txt-prime pe-2"></i>Launch</p>
-                        <p class=""><i class="bi bi-arrows-angle-expand txt-prime pe-2"></i>View</p>
+                        <p class="" id="view"><i class="bi bi-arrows-angle-expand txt-prime pe-2"></i>View</p>
                         <p id="edit-user-details-btn"><i class="bi bi-pencil-fill txt-prime pe-2"></i>Edit</p>
                         <p ><i class="bi bi-copy txt-prime pe-2" id="copypassword"></i>Copy password</p>
                         <p ><i class="bi bi-copy txt-prime pe-2" id="copyusername"></i>Copy username</p>
@@ -125,12 +125,90 @@
             </div>
   
 
+            <!-- DISPLAY FORM -->
+            <div class="row g-0 d-none form-top" id="display-password">
+                <form action="./../php/updatepassword.php" method="post" id="display-password-form"
+                    class="col-lg-7 mx-auto">
+                    
+                    <div class="form-container m-md-4 p-4">
+                        
+                        <i class="bi bi-x-lg cross txt-prime" id="display-close"></i>
+                        <div class="col-lg-11 row mx-auto">
+                            <p class=" form-heading-accout-create">Your Password...</p>
+                            <!-- Name Input -->
+                            <div class="col-md-12">
+                                <label
+                                    class="registeration-label txt-secondary-dark"
+                                    for="fname">App Name</label>
+                                <input
+                                    class="registeration-input txt-secondary-dark back-primary-white"
+                                    type="text" name="display-app-name" id="display-app-name" disabled>
+                            </div>
+                            <!-- URL Input -->
+                            <div class="col-md-12">
+                                <label
+                                    class="registeration-label txt-secondary-dark"
+                                    for="fname">URL</label>
+                                <input
+                                    class="registeration-input txt-secondary-dark back-primary-white"
+                                    type="text" name="display-url" id="display-url" disabled>
+                            </div>
+                            <!-- USERNAME Input -->
+                            <div class="col-md-12">
+                                <label
+                                    class="registeration-label txt-secondary-dark"
+                                    for="username">Username</label>
+                                <input
+                                    class="registeration-input txt-secondary-dark back-primary-white"
+                                    type="text" name="updated-username" id="display-username" disabled>
+                            </div>
+                            <!-- Password part -->
+                            <div class="col-md-12">
+                                <label
+                                    class="registeration-label txt-secondary-dark"
+                                    for="password">Password</label>
+                                <div style="position: relative;">
+                                    <input
+                                        class="registeration-input txt-secondary-dark back-primary-white"
+                                        type="password" name="updated-password"
+                                        id="display-password-field"
+                                        style="padding-right: 2rem;" disabled>
+                                    <i class="bi bi-eye-slash txt-prime fs-5"
+                                        id="display-toggle-password"
+                                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+                                </div>
+                            </div>
+                            <!-- Name Input -->
+                            <div class="col-md-12">
+                                <label
+                                    class="registeration-label txt-secondary-dark"
+                                    for="fname">Note</label>
+                                <input
+                                    class="registeration-input txt-secondary-dark back-primary-white"
+                                    type="text" name="updated-note" id="display-note" disabled>
+                            </div>
+                            <!-- Favourite -->
+                            <div class="col-md-12">
+                                <label
+                                    class="registeration-label txt-secondary-dark"
+                                    for="fname"><input class="form-check-input me-3"
+                                    type="checkbox" name="updated-favourite"
+                                    id="display-favourite" disabled> Favourite
+                                    </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
 
             <!-- UPDATE FORM -->
-            <div class="row g-0 d-none" id="update-password">
+            <div class="row g-0 d-none form-top"  id="update-password">
                 <form action="./../php/updatepassword.php" method="post" id="update-password-form"
                     class="col-lg-7 mx-auto">
                     <div class="form-container m-md-4 p-4">
+                        <i class="bi bi-x-lg cross txt-prime" id="update-close"></i>
+
                         <div class="col-lg-11 row mx-auto">
                             <p class=" form-heading-accout-create">Update
                                 password...</p>
@@ -218,14 +296,12 @@
 
             </div>
 
-
-
-
             <!-- FORM START -->
-            <div class="row g-0 d-none" id="add-passwords">
+            <div class="row g-0 d-none form-top" id="add-passwords">
                 <form action method="post" id="password-form"
                     class="col-lg-7 mx-auto">
                     <div class="form-container m-md-4 p-4">
+                        <i class="bi bi-x-lg cross txt-prime" id="add-close"></i>
                         <div class="col-lg-11 row mx-auto">
                             <p class=" form-heading-accout-create">Add a new
                                 password...</p>
@@ -325,6 +401,7 @@
         <script src="../js/fetchall.js"></script>
         <script src="../js/addpassword.js"></script>
         <script src="../js/update-password.js"></script>
+        <script src="../js/displayPassword.js"></script>
         <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

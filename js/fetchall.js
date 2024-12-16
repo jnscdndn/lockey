@@ -67,11 +67,30 @@ function show_details(element) {
     $("#copyurl").click(() => {
         copy_clipboard(element.url, event); 
     });
+    $("#view").click(() => {
+        $('#detail-modal').css('display', 'none');
+        $('#passwords-display').css('display', 'none');
+        displayPopulate(element);
+        $('#display-close').click(()=>{
+            $('#display-password').addClass("d-none");
+            $("#featureList").removeClass("d-none");
+            $('#passwords-display').css('display', 'block');   
+            $('#add-password-btn').removeClass("d-none");
+
+        });
+    });
     
     $("#edit-user-details-btn").click(()=>{
         $('#detail-modal').css('display', 'none');
         $('#passwords-display').css('display', 'none');
         populateDetails(element);
+        $('#update-close').click(()=>{
+            $('#update-password').addClass("d-none");
+            $("#featureList").removeClass("d-none");
+            $('#passwords-display').css('display', 'block');  
+            $('#add-password-btn').removeClass("d-none");
+
+        });
     })
     $("#delete-user-details-btn").click(()=>{
         $('#detail-modal').css('display', 'none');
