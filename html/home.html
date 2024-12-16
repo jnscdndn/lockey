@@ -90,7 +90,7 @@
             <!-- SHOW DEATILS -->
             <!-- Modal structure -->
             <div id="detail-modal" class="modal">
-                <div class="modal-content w-75 p-4">
+                <div class="modal-content p-4">
                     <i class="bi bi-x-lg close txt-prime"></i>
                     <div class="d-flex gap-2 align-items-center">
                         <i class="bi bi-file-lock2-fill display-1 txt-prime"></i>
@@ -103,7 +103,23 @@
                         <p ><i class="bi bi-copy txt-prime pe-2" id="copypassword"></i>Copy password</p>
                         <p ><i class="bi bi-copy txt-prime pe-2" id="copyusername"></i>Copy username</p>
                         <p ><i class="bi bi-copy txt-prime pe-2" id="copyurl"></i>Copy URL</p>
-                        <p class="txt-prime"><i class="bi bi-trash3-fill txt-prime pe-2"></i>Delete</p>    
+                        <p class="txt-prime" id="delete-user-details-btn"><i class="bi bi-trash3-fill txt-prime pe-2"></i>Delete</p>    
+                    </div>
+                </div>
+            </div>
+            <!-- Delete view -->
+            <div id="delete-modal" class="modal">
+                <div class="modal-content p-4">
+                    <div class="d-flex gap-2 align-items-center mb-2">
+                        <i class="bi bi-trash3-fill txt-prime display-1 txt-prime"></i>
+                        <h4>Delete Item</h4>
+                    </div>
+                    <p>
+                        Delete this item? It will be gone forever.
+                    </p>
+                    <div class="d-flex justify-content-end gap-3">
+                        <a class="text-decoration-none txt-primary-dark" id="cancel-btn">Cancel</a>
+                        <a class="text-decoration-none txt-prime" id="delete-btn">Delete</a>
                     </div>
                 </div>
             </div>

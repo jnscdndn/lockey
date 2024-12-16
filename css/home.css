@@ -109,15 +109,18 @@
   .modal-content {
     background-color: white;
     border-radius: 10px;
+    width: 350px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
   
-  .close {
+  .modal .close {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 30px;
     cursor: pointer;
   }
-  
+  .modal p,a{
+    cursor: pointer;
+  }
  

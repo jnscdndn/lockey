@@ -73,7 +73,27 @@ function show_details(element) {
         $('#passwords-display').css('display', 'none');
         populateDetails(element);
     })
-
+    $("#delete-user-details-btn").click(()=>{
+        $('#detail-modal').css('display', 'none');
+        $('#delete-modal').css('display', 'flex');
+        $('#cancel-btn').click(()=>{
+            $('#delete-modal').css('display', 'none');
+            $('#detail-modal').css('display', 'flex');
+        })
+        $('#delete-btn').click(()=>{
+            $.ajax({
+                url:"./../php/delete-password.php",
+                method:"POST",
+                data:{
+                    "id":element.id
+                },
+                success:(data)=>{
+                    console.log(data);
+                    window.location="home.html";
+                }
+            })
+        })
+    })
 }
 
 $('.close').click(()=>{
@@ -140,7 +160,7 @@ $("#favourite-passwords").click(()=>{
                                 <i
                                     class="bi bi-file-lock2-fill display-1 txt-prime"></i>
                             </div>
-                            <div class="col-8 ps-lg-3 my-auto">
+                            <div class="col-8 ps-lg-3 my-auto" onclick='show_details(${JSON.stringify(element)})'>
                                 <h5 class="m-0 text-truncate">${element.name}</h5>
                                 <p class="m-0 text-truncate" style="max-width: 100%;">${element.username}</p>
                             </div>
@@ -183,7 +203,7 @@ $("#all-passwords").click(()=>{
                                 <i
                                     class="bi bi-file-lock2-fill display-1 txt-prime"></i>
                             </div>
-                            <div class="col-8 ps-lg-3 my-auto">
+                            <div class="col-8 ps-lg-3 my-auto" onclick='show_details(${JSON.stringify(element)})'>
                                 <h5 class="m-0 text-truncate">${element.name}</h5>
                                 <p class="m-0 text-truncate" style="max-width: 100%;">${element.username}</p>
                             </div>
