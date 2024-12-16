@@ -21,7 +21,7 @@ $("#add-password-btn").click(()=>{
         $("#featureList").addClass("d-none");
     })
     $('#add-close').click(()=>{
-        $("#passwords-display").removClass("d-none");  
+        $("#passwords-display").removeClass("d-none");  
         $('#add-passwords').addClass("d-none");
         $("#featureList").removeClass("d-none");
         $('#add-password-btn').removeClass("d-none");
