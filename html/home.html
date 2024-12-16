@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="./../css/addpassword.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
             rel="stylesheet">
@@ -22,19 +23,22 @@
         <nav class="d-none d-lg-flex full-navbar">
             <img src="./../images/Lockey-logo-name.png"
                 class="nav-logo-image-full-desktop" alt="lockey logo">
-        
-        <!-- SEARCH BAR DESKTOP-->
-         <form class="search-container w-75">
-            <div class="row g-0">
-               <div class="col-1 col-md-2"></div>
-                <div class="col-10 col-md-8 d-flex back-prime-secondary align-items-center border rounded">
-                    <i class="bi bi-search txt-prime fw-bolder fs-3 p-1 ps-2"></i>
-                    <input type="text" class="search-input border-0" placeholder="Seach">
+
+            <!-- SEARCH BAR DESKTOP-->
+            <form class="search-container w-75">
+                <div class="row g-0">
+                    <div class="col-1 col-md-2"></div>
+                    <div
+                        class="col-10 col-md-8 d-flex back-prime-secondary align-items-center border rounded">
+                        <i
+                            class="bi bi-search txt-prime fw-bolder fs-3 p-1 ps-2"></i>
+                        <input type="text" class="search-input border-0"
+                            placeholder="Seach">
+                    </div>
+
                 </div>
-                
-             </div>
-        </form>
-        <!-- SEARCH BAR END -->
+            </form>
+            <!-- SEARCH BAR END -->
             <div class="nav-links-container-desktop">
                 <a href="home.html"
                     class="nav-links-desktop txt-primary-dark">Home</a>
@@ -66,12 +70,15 @@
         </div>
         <!-- NAV BAR END -->
         <!-- MOBILE SEARCH BAR -->
-         <div class="m-5"></div>
+        <div class="m-5"></div>
         <form class="d-block d-lg-none search-container-desktop">
             <div class="row g-0 p-2">
-                <div class="col-12 d-flex back-prime-secondary align-items-center border rounded">
-                    <i class="bi bi-search txt-prime fw-bolder fs-3 p-1 ps-2"></i>
-                    <input type="text" class="search-input border-0" placeholder="Seach">
+                <div
+                    class="col-12 d-flex back-prime-secondary align-items-center border rounded">
+                    <i
+                        class="bi bi-search txt-prime fw-bolder fs-3 p-1 ps-2"></i>
+                    <input type="text" class="search-input border-0"
+                        placeholder="Seach">
                 </div>
             </div>
         </form>
@@ -83,15 +90,32 @@
         <div class="" id="body-container">
             <!-- PASSWORD CONTAINER -->
             <div id="passwords-display">
-            </div>
 
+                <div class="card-container d-flex flex-wrap p-2">
+                    <div class="card-container-inner row col-12 col-md-6 col-lg-4 g-0 ">
+                        <div class="col-2">
+                            <i
+                                class="bi bi-file-lock2-fill display-1 txt-prime"></i>
+                        </div>
+                        <div class="col-8 my-auto">
+                            <h5 class="m-0 text-truncate"></h5>
+                            <p class="m-0 text-truncate" style="max-width: 100%;"></p>
+                        </div>
+                        <div class="col-2  my-auto text-end p-2">
+                            <i class="bi bi-copy fs-3 txt-prime"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- FORM START -->
             <div class="row g-0 d-none" id="add-passwords">
-                <form action="" method="post" id="password-form"  class="col-lg-7 mx-auto">
+                <form action method="post" id="password-form"
+                    class="col-lg-7 mx-auto">
                     <div class="form-container m-md-4 p-4">
                         <div class="col-lg-11 row mx-auto">
-                            <p class=" form-heading-accout-create">Add a new password...</p>
+                            <p class=" form-heading-accout-create">Add a new
+                                password...</p>
                             <!-- Name Input -->
                             <div class="col-md-12">
                                 <label
@@ -114,22 +138,28 @@
                             </div>
                             <!-- USERNAME Input -->
                             <div class="col-md-12">
-                                    <label
+                                <label
                                     class="registeration-label txt-secondary-dark"
                                     for="username">Username</label>
-                                    <input
+                                <input
                                     class="registeration-input txt-secondary-dark back-primary-white"
-                                    type="text" name="username" id="username">                                
+                                    type="text" name="username" id="username">
                             </div>
                             <p class="error-label" id="username-error"></p>
                             <!-- Password part -->
                             <div class="col-md-12">
-                                <label class="registeration-label txt-secondary-dark" for="password">Password</label>
+                                <label
+                                    class="registeration-label txt-secondary-dark"
+                                    for="password">Password</label>
                                 <div style="position: relative;">
                                     <input
                                         class="registeration-input txt-secondary-dark back-primary-white"
-                                        type="password" name="password" id="password" style="padding-right: 2rem;">
-                                    <i class="bi bi-eye-slash txt-prime fs-5" id="toggle-password" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+                                        type="password" name="password"
+                                        id="password"
+                                        style="padding-right: 2rem;">
+                                    <i class="bi bi-eye-slash txt-prime fs-5"
+                                        id="toggle-password"
+                                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
                                 </div>
                                 <p class="error-label" id="password-error"></p>
                             </div>
@@ -147,28 +177,31 @@
                             <div class="col-md-12">
                                 <label
                                     class="registeration-label txt-secondary-dark"
-                                    for="fname">Favourite 
-                                    <input class="form-check-input" type="checkbox" name="favourite" id="favourite"> </label>
-                                
+                                    for="fname">Favourite
+                                    <input class="form-check-input"
+                                        type="checkbox" name="favourite"
+                                        id="favourite"> </label>
+
                                 <p class="error-label" id="note-error"></p>
                             </div>
-                            
-                            
-                            <input type="password" name="encrypted_password" id="encrypted_password" hidden>
+
+                            <input type="password" name="encrypted_password"
+                                id="encrypted_password" hidden>
                             <input
                                 class="register-btn btn back-prime p-3 fs-5 txt-primary-white fw-bold border rounded-pill mb-3"
-                                 type="submit" name="register" value="Register ->">
+                                type="submit" name="register"
+                                value="Register ->">
                         </div>
                     </div>
                 </form>
 
             </div>
-                
+
         </div>
         <!-- FORM END -->
-        <!-- <h1 id="welcome-tag"></h1> -->
-        <button class="add-btn back-prime txt-primary-white" id="add-password-btn"><i class="bi bi-plus-lg"></i> New</button>
-
+        <!-- new button -->
+        <button class="add-btn back-prime txt-primary-white"
+            id="add-password-btn"><i class="bi bi-plus-lg"></i> New</button>
 
         <script src="../js/cryptoJs/crypto-js.min.js"></script>
         <script src="../js/encryption.js"></script>

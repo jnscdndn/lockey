@@ -19,10 +19,12 @@ $("#add-password-btn").click(()=>{
     if(form_hidden){
         $("#add-passwords").removeClass("d-none");
         $("#passwords-display").addClass("d-none");
+        $("#add-password-btn").text("Back");
         form_hidden=false;
     } else{
         $("#passwords-display").removeClass("d-none");
         $("#add-passwords").addClass("d-none");
+        $("#add-password-btn").html("<i class='bi bi-plus-lg'></i> New");
         form_hidden=true;
     }
 })

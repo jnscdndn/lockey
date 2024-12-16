@@ -65,6 +65,11 @@
 .nav-below-object {
     margin-top: 0; 
 }
+.card-container-inner{
+    border:3px solid  #fad6cf !important;
+    border-radius: 7px;
+}
+
 
 @media (min-width: 992px) {
     .nav-below-object {
