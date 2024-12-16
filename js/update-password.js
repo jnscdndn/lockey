@@ -13,8 +13,8 @@ $("#updated-toggle-password").click(function(){
         icon.addClass('bi-eye-slash');
     }
 });
-populateDetails=(id)=>{
-    $("#passwords-display").addClass("d-none");
+populateDetails=(element)=>{
+    // $("#passwords-display").addClass("d-none");
     $("#update-password").removeClass("d-none");
     $.ajax({
         url:"./../php/getpassworddetails.php",
