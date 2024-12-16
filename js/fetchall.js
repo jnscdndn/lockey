@@ -22,7 +22,6 @@ function fallbackCopy(password, event, icon) {
     tempDiv.style.width = "0"; // Avoid rendering
     document.body.appendChild(tempDiv);
 
-    // Make the div editable and select the text
     tempDiv.contentEditable = true;
     tempDiv.focus();
     document.execCommand("selectAll");
@@ -36,22 +35,50 @@ function fallbackCopy(password, event, icon) {
         alert("Failed to copy password. Please copy manually.");
     }
 
-    // Clean up the temporary div
     document.body.removeChild(tempDiv);
 }
 
 function changeIcon(icon) {
-    // Change the icon to clipboard-check-fill for 2 seconds
     icon.classList.remove("bi-copy");
     icon.classList.add("bi-clipboard-check-fill");
 
-    // Restore the original icon after 2 seconds
     setTimeout(() => {
         icon.classList.remove("bi-clipboard-check-fill");
         icon.classList.add("bi-copy");
-    }, 1000); // 2000 milliseconds = 2 secondsds
+    }, 1000); 
 }
 
+
+function show_details(element) {
+    $('#appname').text(element.name);
+    $('#detail-modal').css('display', 'flex');
+    // launch
+    $("#launch").click(()=>{
+        window.location=element.url
+    })
+    // copy password
+    $("#copypassword").click(() => {
+        const password = decryptPassword(element.password, element.username); // Decrypt the password 
+        copy_clipboard(password, event); 
+    });
+    $("#copyusername").click(() => {
+        copy_clipboard(element.username, event); 
+    });
+    $("#copyurl").click(() => {
+        copy_clipboard(element.url, event); 
+    });
+    
+    $("#edit-user-details-btn").click(()=>{
+        $('#detail-modal').css('display', 'none');
+        $('#passwords-display').css('display', 'none');
+        populate_details(element)
+    })
+
+}
+
+$('.close').click(()=>{
+    $('#detail-modal').css('display', 'none');
+});
 
 
 $(document).ready(()=>{
@@ -73,9 +100,9 @@ $(document).ready(()=>{
                                 <i
                                     class="bi bi-file-lock2-fill display-1 txt-prime"></i>
                             </div>
-                            <div class="col-8 ps-lg-3 my-auto">
+                            <div class="col-8 ps-lg-3 my-auto" onclick='show_details(${JSON.stringify(element)})'>
                                 <h5 class="m-0 text-truncate">${element.name}</h5>
-                                <p class="m-0 text-truncate" style="max-width: 100%;">${element.email}</p>
+                                <p class="m-0 text-truncate" style="max-width: 100%;">${element.username}</p>
                             </div>
                             <div class="col-2  my-auto text-end p-2">
                                 <i class="bi bi-copy fs-3 txt-prime" onclick="copy_clipboard('${decryptPassword(element.password,element.username)}', event)"></i>
@@ -115,7 +142,7 @@ $("#favourite-passwords").click(()=>{
                             </div>
                             <div class="col-8 ps-lg-3 my-auto">
                                 <h5 class="m-0 text-truncate">${element.name}</h5>
-                                <p class="m-0 text-truncate" style="max-width: 100%;">${element.email}</p>
+                                <p class="m-0 text-truncate" style="max-width: 100%;">${element.username}</p>
                             </div>
                             <div class="col-2  my-auto text-end p-2">
                                 <i class="bi bi-copy fs-3 txt-prime" onclick="copy_clipboard('${decryptPassword(element.password,element.username)}', event)"></i>
@@ -158,7 +185,7 @@ $("#all-passwords").click(()=>{
                             </div>
                             <div class="col-8 ps-lg-3 my-auto">
                                 <h5 class="m-0 text-truncate">${element.name}</h5>
-                                <p class="m-0 text-truncate" style="max-width: 100%;">${element.email}</p>
+                                <p class="m-0 text-truncate" style="max-width: 100%;">${element.username}</p>
                             </div>
                             <div class="col-2  my-auto text-end p-2">
                                 <i class="bi bi-copy fs-3 txt-prime" onclick="copy_clipboard('${decryptPassword(element.password,element.username)}', event)"></i>
