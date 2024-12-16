@@ -1,4 +1,4 @@
-
+// Toggle passwrd view
 $("#toggle-password").click(function(){
     const passwordInput = $('#password');
     const icon = $(this); 
@@ -36,9 +36,9 @@ $("#password-form").submit((e)=>{
     let username = $("#username").val();
     let password = $("#password").val();
     let note = $("#note").val();
-    let check = $("#favourite").val();
-    let favourite="no";
-    if(check=='on'){
+    let check = $("#favourite");
+    let favourite = "no";
+    if(check.is(":checked")){
         favourite="yes";
     }
     let isError=false;

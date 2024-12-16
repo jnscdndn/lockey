@@ -21,21 +21,21 @@ $(document).ready(()=>{
         }
     })
     //getting all feature list
-    $.ajax({
-        url:"./../php/featureList.php",
-        method:"get",
-        success:(data)=>{
-            try{
-                data = JSON.parse(data)
-                str=``
-                data.forEach(element => {
-                    str+=`<a href="${element.link}" class="txt-secondary-dark scrollable-content">${element.name}</a>`
-                });
-                // console.log(str);
-                $("#featureList").html(str);
-            } catch(error){
-                console.log(error);
-            }
-        }
-    })
+    // $.ajax({
+    //     url:"./../php/featureList.php",
+    //     method:"get",
+    //     success:(data)=>{
+    //         try{
+    //             data = JSON.parse(data)
+    //             str=``
+    //             data.forEach(element => {
+    //                 str+=`<p id="${element.id}" class="txt-secondary-dark scrollable-content">${element.name}</p>`
+    //             });
+    //             // console.log(str);
+    //             $("#featureList").html(str);
+    //         } catch(error){
+    //             console.log(error);
+    //         }
+    //     }
+    // })
 })
