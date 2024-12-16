@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2024 at 05:09 PM
+-- Generation Time: Dec 16, 2024 at 07:51 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `passwords` (
   `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `url` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
@@ -36,14 +37,6 @@ CREATE TABLE `passwords` (
   `note` varchar(255) NOT NULL,
   `favourite` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `passwords`
---
-
-INSERT INTO `passwords` (`id`, `name`, `url`, `username`, `password`, `note`, `favourite`) VALUES
-(2, 'Lockey', 'https://www.dailymotion.com/video/x8wr8oe', 'adj', 'aqhdj', 'lajfdlj', 'yes'),
-(3, 'Lockey', 'lockey.com', 'pps491415@gmail.com', 'Pritish*123', 'Lockey Password', 'yes');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +56,7 @@ ALTER TABLE `passwords`
 -- AUTO_INCREMENT for table `passwords`
 --
 ALTER TABLE `passwords`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
