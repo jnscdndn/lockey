@@ -59,7 +59,6 @@ $('#register-form').submit(function(e) {
     }else{
         $('#lname-error').text("");
     }
-    console.log(email);
     
     if(email==""){
         $('#email-error').text("Please enter your email");
@@ -104,11 +103,9 @@ $('#register-form').submit(function(e) {
         $('#cnf-password-error').text("Password and confirm password must be same");
         iserror=true;
     }else{
-        console.log("enter");
         $('#cnf-password-error').text("");
         const hash = CryptoJS.SHA256(password).toString();
         $("#encrypted_password").val(hash);
-        console.log(hash);
     }
     if(iserror && !verified){
         e.preventDefault();

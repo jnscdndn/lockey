@@ -3,7 +3,6 @@ let otp;
 let verified=false;
 $("#send_otp").click(function () {
     let email = $("#email").val();
-    console.log(email);
     if (email === "") {
         $("#email-error").text("Please enter an email");
         return;
@@ -24,7 +23,6 @@ $("#send_otp").click(function () {
             otp:otp
         },
         success: function (data) {
-            console.log(data);
             data = JSON.parse(data);
             if (data['status'] === "success") {
                 otpSend=true
@@ -68,12 +66,9 @@ function startTimer() {
 $("#verify").click(()=>{
     if(otpSend){
         if ($("#otp").val()==otp){
-            console.log("enter");
-            
             $("#verify").text("Verified")
             $("#verify").removeClass("back-prime")
             $("#verify").removeClass("txt-primary-white")
-
             $("#verify").addClass("back-prime-secondary")
             $("#verify").addClass("txt-primary-dark")
             

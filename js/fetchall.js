@@ -107,7 +107,6 @@ function show_details(element) {
                     "id":element.id
                 },
                 success:(data)=>{
-                    console.log(data);
                     window.location="home.html";
                 }
             })
@@ -126,10 +125,12 @@ $(document).ready(()=>{
         url:"./../php/getallpasswords.php",
         method:"get",
         success:(data)=>{
-            // console.log(data);
             try{
                 data = JSON.parse(data);
-                console.log(data);
+                if(data.length==0){
+                $("#passwords-display").html("<h1 class='mt-5 txt-secondary-dark text-center'>No Data Available<h1>")
+                    return
+                }
                 str=`<div class="card-container d-flex flex-wrap p-2">`
                 data.forEach(element=>{
                     str+=`
@@ -169,7 +170,10 @@ $("#favourite-passwords").click(()=>{
         success:(data)=>{
             try{
                 data = JSON.parse(data);
-                console.log(data);
+                if(data.length==0){
+                    $("#passwords-display").html("<h1 class='mt-5 txt-secondary-dark text-center'>No Data Available<h1>")
+                        return
+                }
                 str=`<div class="card-container d-flex flex-wrap p-2">`
                 data.forEach(element=>{
                     str+=`
@@ -212,7 +216,10 @@ $("#all-passwords").click(()=>{
         success:(data)=>{
             try{
                 data = JSON.parse(data);
-                console.log(data);
+                if(data.length==0){
+                    $("#passwords-display").html("<h1 class='mt-5 txt-secondary-dark text-center'>No Data Available<h1>")
+                        return
+                }
                 str=`<div class="card-container d-flex flex-wrap p-2">`
                 data.forEach(element=>{
                     str+=`

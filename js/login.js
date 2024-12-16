@@ -1,5 +1,7 @@
 
 $("#toggle-password").click(function(){
+    console.log("enter");
+    
     const passwordInput = $('#password');
     const icon = $(this); 
 
@@ -67,14 +69,10 @@ $("#login-form").submit((e)=>{
             success:(data)=>{
                 try{
                     data = JSON.parse(data);
-                    // console.log(data);
                     
                     if(data['status']=="success"){
-                        // console.log("Success");
                         window.location="./home.html"
-                    } else{
-                        // console.log("Error");
-                        
+                    } else{             
                         if(data['invalid']=="email"){
                             $("#email-error").text("Email is not registered");
                         } else if(data['invalid']=="password"){

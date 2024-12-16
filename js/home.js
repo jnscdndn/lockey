@@ -1,5 +1,4 @@
 $(document).ready(()=>{
-    // console.log("at home");
     $.ajax({
         url:"./../php/loggedincheck.php",
         method:"get",
@@ -20,22 +19,4 @@ $(document).ready(()=>{
             
         }
     })
-    //getting all feature list
-    // $.ajax({
-    //     url:"./../php/featureList.php",
-    //     method:"get",
-    //     success:(data)=>{
-    //         try{
-    //             data = JSON.parse(data)
-    //             str=``
-    //             data.forEach(element => {
-    //                 str+=`<p id="${element.id}" class="txt-secondary-dark scrollable-content">${element.name}</p>`
-    //             });
-    //             // console.log(str);
-    //             $("#featureList").html(str);
-    //         } catch(error){
-    //             console.log(error);
-    //         }
-    //     }
-    // })
 })
