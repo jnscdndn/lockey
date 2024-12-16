@@ -128,7 +128,7 @@
 
             <!-- UPDATE FORM -->
             <div class="row g-0 d-none" id="update-password">
-                <form action method="post" id="update-password-form"
+                <form action="./../php/updatepassword.php" method="post" id="update-password-form"
                     class="col-lg-7 mx-auto">
                     <div class="form-container m-md-4 p-4">
                         <div class="col-lg-11 row mx-auto">
@@ -143,6 +143,9 @@
                                     class="registeration-input txt-secondary-dark back-primary-white"
                                     type="text" name="updated-app-name" id="updated-app-name">
                                 <p class="error-label" id="updated-app-name-error"></p>
+                                <input
+                                    class="registeration-input txt-secondary-dark back-primary-white"
+                                    type="text" name="updated-id" id="updated-id" hidden>
                             </div>
                             <!-- URL Input -->
                             <div class="col-md-12">
@@ -196,7 +199,7 @@
                                 <label
                                     class="registeration-label txt-secondary-dark"
                                     for="fname"><input class="form-check-input me-3"
-                                    type="checkbox" name="favourite"
+                                    type="checkbox" name="updated-favourite"
                                     id="updated-favourite"> Favourite
                                     </label>
 
