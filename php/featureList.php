@@ -2,11 +2,11 @@
 $lst=array(
     array(
         "name"=>"All",
-        "link"=>"",
+        "id"=>"all",
     ),
     array(
         "name"=>"Favourites",
-        "link"=>"",
+        "id"=>"favourites",
     )
 );
 echo json_encode($lst);

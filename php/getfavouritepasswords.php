@@ -3,7 +3,7 @@
     session_start();
     $email =$_SESSION['email'];
     try{
-        $qry = "SELECT * FROM passwords WHERE email=?";
+        $qry = "SELECT * FROM passwords WHERE email=? and favourite='yes'";
         $stmt = $conn->prepare($qry);
         $stmt->bind_param("s",$email);
         $stmt->execute();

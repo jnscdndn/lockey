@@ -9,3 +9,12 @@ $(document).ready(()=>{
     })
 })
 
+$("#favourite-passwords").click(()=>{
+    $.ajax({
+        url:"./../php/getfavouritepasswords.php",
+        method:"get",
+        success:(data)=>{
+            console.log(data);
+        }
+    })
+})
