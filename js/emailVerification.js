@@ -58,6 +58,10 @@ function startTimer() {
         if (timeLeft <= 0) {
             clearInterval(interval); 
             btn.prop("disabled", false).text("Resend OTP")
+            btn.removeClass("back-prime-secondary")
+            btn.removeClass("txt-primary-dark")
+            btn.addClass("back-prime")
+            btn.addClass("txt-primary-white")
         }
     }, 1000);
 }
