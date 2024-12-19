@@ -69,7 +69,10 @@ function startTimer() {
 
 $("#verify").click(()=>{
     if(otpSend){
-        if ($("#otp").val()==otp){
+        if($("#otp").val==""){
+            $("#otp-error").val("Please enter the otp")
+        }
+        else if ($("#otp").val()==otp){
             $("#verify").text("Verified")
             $("#verify").removeClass("back-prime")
             $("#verify").removeClass("txt-primary-white")
@@ -98,6 +101,9 @@ $("#verify").click(()=>{
                 "cursor": "not-allowed",
             });  
             verified=true;
+            $("#otp-error").text("");
+        } else{
+            $("#otp-error").text("Invallid OTP");
         }
     }
 })
