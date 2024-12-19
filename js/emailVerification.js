@@ -7,10 +7,6 @@ $("#send_otp").click(function () {
         $("#email-error").text("Please enter an email");
         return;
     }
-    if (!email.match(/^[a-zA-Z0-9.]{3,}@[a-zA-Z]{3,12}\.[a-zA-Z]{2,5}$/)) {
-        $("#email-error").text("Please enter a valid email");
-        return;
-    }
     $("#email-error").text("");
     let length=6
     let num=Math.random()
@@ -24,6 +20,7 @@ $("#send_otp").click(function () {
         },
         success: function (data) {
             data = JSON.parse(data);
+            console.log(data)
             if (data['status'] === "success") {
                 otpSend=true
                 $("#send_otp").text("Otp Sent");
@@ -40,9 +37,7 @@ function startTimer() {
     let timeLeft = 60; 
 
     btn.prop("disabled", true).css({
-        // "background-color": "#fad6cf",
         "cursor": "not-allowed",
-        // "border-color": "#ff9b8a"
     });
 
 
@@ -78,12 +73,9 @@ $("#verify").click(()=>{
             $("#verify").removeClass("txt-primary-white")
             $("#verify").addClass("back-prime-secondary")
             $("#verify").addClass("txt-primary-dark")
-            
-
-
             $("#send_otp").removeClass('back-prime')
-            $("#send_otp").removeClass("txt-primary-white")
 
+            $("#send_otp").removeClass("txt-primary-white")
             $("#send_otp").addClass("back-prime-secondary")
             $("#send_otp").addClass("txt-primary-dark")
 

@@ -1,5 +1,5 @@
 // Toggle passwrd view
-$("#updated-toggle-password").click(function(){
+$("#toggle-password").click(function(){
     const passwordInput = $('#password');
     const icon = $(this); 
 

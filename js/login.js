@@ -38,14 +38,12 @@ $("#login-form").submit((e)=>{
     if(email==""){
         $('#email-error').text("Please enter your email");
         iserror=true;
-    }else if(!email.match(/^[a-zA-Z0-9.]{3,}@[a-zA-Z]{3,12}.[a-zA-Z]{2,5}$/)){
-        $('#email-error').text("Please enter a valid email");
-        iserror=true;
-    }else{
+    }
+    else{
         $('#email-error').text("");
     }
 
-    if(password==""){
+    if(password===""){
         $('#password-error').text("Please enter your password");
         iserror=true;
     }else if(!password.match(/[0-9]/) || !password.match(/[a-z]/) || !password.match(/[A-Z]/) || !password.match(/[@#$%^&*-_=+?/><]/)){
@@ -53,14 +51,14 @@ $("#login-form").submit((e)=>{
         iserror=true;
     }else if(password.length<8){
         $('#password-error').text("Enter a valid password");
+        iserror=true;
     }else{
         $('#password-error').text("");
         var pass_hash = CryptoJS.SHA256(password).toString();
-        // console.log(pass_hash);
         $("#encrypted_password").val(pass_hash);
     }
     if(iserror){
-        // e.preventDefault();
+        e.preventDefault();
     } else{
         $.ajax({
             url:"./../php/login.php",

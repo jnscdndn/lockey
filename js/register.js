@@ -63,10 +63,8 @@ $('#register-form').submit(function(e) {
     if(email==""){
         $('#email-error').text("Please enter your email");
         iserror=true;
-    }else if(!email.match(/^[a-zA-Z0-9.]{3,}@[a-zA-Z]{3,12}.[a-zA-Z]{2,5}$/)){
-        $('#email-error').text("Please enter a valid email");
-        iserror=true;
-    }else{
+    }
+    else{
         $('#email-error').text("");
     }
     if(otp==""){
@@ -92,6 +90,7 @@ $('#register-form').submit(function(e) {
         iserror=true;
     }else if(password.length<8){
         $('#password-error').text("password must be atleast 8 characters");
+        iserror=true;
     }else{
         $('#password-error').text("");
     }
@@ -107,8 +106,9 @@ $('#register-form').submit(function(e) {
         const hash = CryptoJS.SHA256(password).toString();
         $("#encrypted_password").val(hash);
     }
-    if(iserror && !verified){
+    console.log(iserror)
+    console.log(verified)
+    if(iserror || !verified){
         e.preventDefault();
     }
-    
 })
