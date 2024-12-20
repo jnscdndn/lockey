@@ -175,6 +175,13 @@ $(document).ready(() => {
         );
         displayPasswords(filteredData);
     });
+    $("#search-input-mobile").on("input", function () {
+        const query = $(this).val().toLowerCase();
+        const filteredData = allPasswords.filter(element =>
+            element.name.toLowerCase().includes(query)
+        );
+        displayPasswords(filteredData);
+    });
 });
 
 $("#favourite-passwords").click(()=>{
