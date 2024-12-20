@@ -5,10 +5,10 @@ function copy_clipboard(password, event) {
     // Try using the modern Clipboard API
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(password)
-            .then(() => changeIcon(icon)) // Change the icon if copy is successful
-            .catch(() => fallbackCopy(password, event, icon)); // Fallback for older browsers
+            .then(() => changeIcon(icon))
+            .catch(() => fallbackCopy(password, event, icon));
     } else {
-        fallbackCopy(password, event, icon); // Fallback if Clipboard API is not available
+        fallbackCopy(password, event, icon);
     }
 }
 
@@ -58,7 +58,7 @@ function show_details(element) {
     })
     // copy password
     $("#copypassword").click(() => {
-        const password = decryptPassword(element.password, element.username); // Decrypt the password 
+        const password = decryptPassword(element.password, element.username);
         copy_clipboard(password, event); 
     });
     $("#copyusername").click(() => {
@@ -119,49 +119,63 @@ $('.close').click(()=>{
 });
 
 
-$(document).ready(()=>{
-    // CALL DB AND GET ALL PASSWORDS
-    $.ajax({
-        url:"./../php/getallpasswords.php",
-        method:"get",
-        success:(data)=>{
-            try{
-                data = JSON.parse(data);
-                if(data.length==0){
-                $("#passwords-display").html("<h1 class='mt-5 txt-secondary-dark text-center'>No Data Available<h1>")
-                    return
-                }
-                str=`<div class="card-container d-flex flex-wrap p-2">`
-                data.forEach(element=>{
-                    str+=`
-                    <div class="row col-12 col-md-6 col-lg-4 g-0 p-2">
-                        <div class="row g-0 card-container-inner p-2">
-                            <div class="col-2">
-                                <i
-                                    class="bi bi-file-lock2-fill display-1 txt-prime"></i>
-                            </div>
-                            <div class="col-8 ps-lg-3 my-auto" onclick='show_details(${JSON.stringify(element)})'>
-                                <h5 class="m-0 text-truncate">${element.name}</h5>
-                                <p class="m-0 text-truncate" style="max-width: 100%;">${element.username}</p>
-                            </div>
-                            <div class="col-2  my-auto text-end p-2">
-                                <i class="bi bi-copy fs-3 txt-prime" onclick="copy_clipboard('${decryptPassword(element.password,element.username)}', event)"></i>
-                            </div>
-                        </div>
+function displayPasswords(data) {
+    if (data.length === 0) {
+        $("#passwords-display").html("<h1 class='mt-5 txt-secondary-dark text-center'>No Data Available<h1>");
+        return;
+    }
+
+    let str = `<div class="card-container d-flex flex-wrap p-2">`;
+    data.forEach(element => {
+        str += `
+            <div class="row col-12 col-md-6 col-lg-4 g-0 p-2">
+                <div class="row g-0 card-container-inner p-2">
+                    <div class="col-2">
+                        <i class="bi bi-file-lock2-fill display-1 txt-prime"></i>
                     </div>
-                    `
-                })
-                str+=`</div>`
-                $("#passwords-display").html(str)
+                    <div class="col-8 ps-lg-3 my-auto" onclick='show_details(${JSON.stringify(element)})'>
+                        <h5 class="m-0 text-truncate">${element.name}</h5>
+                        <p class="m-0 text-truncate" style="max-width: 100%;">${element.username}</p>
+                    </div>
+                    <div class="col-2 my-auto text-end p-2">
+                        <i class="bi bi-copy fs-3 txt-prime" onclick="copy_clipboard('${decryptPassword(element.password, element.username)}', event)"></i>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    str += `</div>`;
+    $("#passwords-display").html(str);
+}
+
+$(document).ready(() => {
+    let allPasswords = []; 
+    // Fetch all passwords on page load
+    $.ajax({
+        url: "./../php/getallpasswords.php",
+        method: "get",
+        success: (data) => {
+            try {
+                allPasswords = JSON.parse(data); 
+                displayPasswords(allPasswords);
+                $("#favourite-passwords").removeClass("scrollable-content-clicked")
                 $("#all-passwords").addClass("scrollable-content-clicked")
-            }catch(error){
+            } catch (error) {
                 console.log(error);
                 console.log(data);
-                
             }
         }
-    })
-})
+    });
+
+    // Search functionality
+    $("#search-input").on("input", function () {
+        const query = $(this).val().toLowerCase();
+        const filteredData = allPasswords.filter(element =>
+            element.name.toLowerCase().includes(query)
+        );
+        displayPasswords(filteredData);
+    });
+});
 
 $("#favourite-passwords").click(()=>{
     $.ajax({
@@ -170,87 +184,33 @@ $("#favourite-passwords").click(()=>{
         success:(data)=>{
             try{
                 data = JSON.parse(data);
-                if(data.length==0){
-                    $("#passwords-display").html("<h1 class='mt-5 txt-secondary-dark text-center'>No Data Available<h1>")
-                        return
-                }
-                str=`<div class="card-container d-flex flex-wrap p-2">`
-                data.forEach(element=>{
-                    str+=`
-                     <div class="row col-12 col-md-6 col-lg-4 g-0 p-2">
-                        <div class="row g-0 card-container-inner p-2">
-                            <div class="col-2">
-                                <i
-                                    class="bi bi-file-lock2-fill display-1 txt-prime"></i>
-                            </div>
-                            <div class="col-8 ps-lg-3 my-auto" onclick='show_details(${JSON.stringify(element)})'>
-                                <h5 class="m-0 text-truncate">${element.name}</h5>
-                                <p class="m-0 text-truncate" style="max-width: 100%;">${element.username}</p>
-                            </div>
-                            <div class="col-2  my-auto text-end p-2">
-                                <i class="bi bi-copy fs-3 txt-prime" onclick="copy_clipboard('${decryptPassword(element.password,element.username)}', event)"></i>
-                            </div>
-                        </div>
-                    </div>
-                    `
-                })
-                str+=`</div>`
-                $("#passwords-display").html(str)
+                displayPasswords(data)
                 $("#all-passwords").removeClass("scrollable-content-clicked")
                 $("#favourite-passwords").addClass("scrollable-content-clicked")
 
             }catch(error){
                 console.log(error);
                 console.log(data);
-                
             }
         }
     })
 })
 
 $("#all-passwords").click(()=>{
-    // CALL DB AND GET ALL PASSWORDS
     $.ajax({
         url:"./../php/getallpasswords.php",
         method:"get",
         success:(data)=>{
             try{
                 data = JSON.parse(data);
-                if(data.length==0){
-                    $("#passwords-display").html("<h1 class='mt-5 txt-secondary-dark text-center'>No Data Available<h1>")
-                        return
-                }
-                str=`<div class="card-container d-flex flex-wrap p-2">`
-                data.forEach(element=>{
-                    str+=`
-                     <div class="row col-12 col-md-6 col-lg-4 g-0 p-2">
-                        <div class="row g-0 card-container-inner p-2">
-                            <div class="col-2">
-                                <i
-                                    class="bi bi-file-lock2-fill display-1 txt-prime"></i>
-                            </div>
-                            <div class="col-8 ps-lg-3 my-auto" onclick='show_details(${JSON.stringify(element)})'>
-                                <h5 class="m-0 text-truncate">${element.name}</h5>
-                                <p class="m-0 text-truncate" style="max-width: 100%;">${element.username}</p>
-                            </div>
-                            <div class="col-2  my-auto text-end p-2">
-                                <i class="bi bi-copy fs-3 txt-prime" onclick="copy_clipboard('${decryptPassword(element.password,element.username)}', event)"></i>
-                            </div>
-                        </div>
-                    </div>
-                    `
-                })
-                str+=`</div>`
-                $("#passwords-display").html(str)
+                displayPasswords(data)
                 $("#favourite-passwords").removeClass("scrollable-content-clicked")
                 $("#all-passwords").addClass("scrollable-content-clicked")
 
             }catch(error){
                 console.log(error);
-                console.log(data);
-                
+                console.log(data);      
             }
-
         }
     })
 })
