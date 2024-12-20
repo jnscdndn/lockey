@@ -14,13 +14,13 @@ function sendOTP($email, $otp,) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'lockey.pass@gmail.com'; // Replace with your SMTP email
-        $mail->Password = 'jrevsbegjkpwmsep'; // Use app password here
+        $mail->Username = 'lockey.pass@gmail.com';
+        $mail->Password = 'jrevsbegjkpwmsep';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Recipient
-        $mail->setFrom('your-email@gmail.com', 'Lockey');
+        $mail->setFrom('lockey.pass@gmail.com', 'Lockey');
         $mail->addAddress($email); // Pass the actual email address here
 
         // Email content
